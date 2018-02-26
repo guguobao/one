@@ -1,0 +1,345 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>暖风活动</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+<style type="text/css">  
+	*{
+		margin: 0px;
+		padding: 0px;
+	}	
+	.header{
+		width: 1350px;
+		height: 120px;
+		background-color: aqua;
+		margin: 0 auto;
+			
+	}
+	.header .headerimg{
+		width: 100px;
+		height: auto;
+		margin-left: 300px;
+		margin-top: 45px;
+		position: absolute;
+	}
+	.header .title{
+		background-color: aliceblue;
+		width: 660px;
+		height: 60px;
+		margin-left: 500px;
+		margin-top: 60px;
+		padding-left: 50px;
+		position: absolute;
+	}
+	.header .titleul{
+		text-decoration: none;
+		list-style: none;
+		position: relative
+	}
+	.header .titleul li{
+		float: left;
+		height: 68px !important;
+		width: 108px;
+		position: relative
+	}
+	.header .titleul li a{
+	line-height: 71px;
+	text-align: center;
+	color: #000000;
+	font-size: 15px;
+	text-decoration: none;
+	}
+	.header .titleul li a:hover{
+		color: green;
+	}
+	
+	.main-content{
+
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.main-content .active h1{
+		align-content: center;
+		text-align: center;
+		font-size: 24px;
+		line-height: 37px;
+		font-weight: bold;
+		padding-right: 350px;
+		margin-top: 50px;
+		
+	}
+	.main-content .under_article{
+		width: 1200px;
+		height: 80px;
+	}
+	.main-content .under_article .sub_head{
+		width: 880px;
+		display: block;
+		height: 52px;
+	}
+	.main-content .sub_head .sub_heading_con {
+	
+		padding-top: 28px;
+		text-align: center;
+		padding-left: 0px;
+		}
+  .sub_heading_item{
+		line-height: 24px;
+		margin-right: 30px;
+	}
+	
+	body {
+    font-size: 12px;
+    color: #333;
+    background: #ededed;
+    font-family: "Microsoft Yahei";
+	}
+	.main-content-one{
+		width: 1200px;
+		
+		margin: 0 auto;
+		background-color: gray;
+	
+	}
+	.main-content-active{
+		width: 880px;
+		position: absolute;
+		background-color: #FFF;
+	}
+	.main-content-active .main-content-body{
+		width: 800px;
+		margin: 0 auto;
+	
+	
+		margin-bottom: 8px;
+	}
+	
+	.main-content-one .news_pic{
+		width: 100%;
+		height: 500px;
+		margin-top: 50px;
+		
+	}
+	.main-content-one .news_pic img{
+		width: 550px;
+		height: 420px;
+		padding: 0 110px;
+	}
+	
+	.main-content-body .phase_item{
+		margin-bottom: 24px;	
+	}
+	.main-content-body .phase_item .phase {
+    line-height: 24px;
+	}
+	.main-content-one .content_one_right {
+		width: 300px;
+		height: 300px;
+		background-color:#FFF; 
+		float: right;
+		position: relative;
+}
+	.content_one_right .baoming{
+		margin: 0 auto;
+
+		width: 200px;
+		height: 50px;
+		margin-top: 50px;
+	}
+	.content_one_right .baoming p{
+		line-height: 28px;
+		text-align: center
+	}
+	.content_one_right .baoming-2{
+		width: 230px;
+		height: 130px;
+		
+		margin: 0 auto;
+	}
+	.content_one_right .baoming-2 div{
+		width: 68px;
+		height: 100px;
+		margin-right: 12px;
+		background-color: #E7EBEB;
+		float: left;
+	}
+	.content_one_right .baoming-2 img{
+		width: 25px;
+		height: 23px;
+		margin: 15px 20px;
+	}
+	.content_one_right .baoming-2  p{
+		line-height: 20px;
+		text-align: center;
+	}
+	.content_one_right .join{
+		width: 100px;
+		height: 28px;
+		background-color:#F14C48;
+		border: thin;
+		border-radius: 6px 6px 6px 6px;
+		margin: 0 auto;
+	}
+	.content_one_right .join p{
+		text-align: center;
+		line-height: 28px;
+		font-size: 15px;
+		
+	}
+</style>
+		      <script type="text/javascript">
+
+                    var a={{ picture }};
+                    document.alert("fgsd");
+
+                    </script>
+<body>
+
+<div class="header">
+		
+	<img class="headerimg" alt="暖风公益" src="{% static "picture/logo .jpg"%}"/>
+		<div class="title">
+			 <ul class="titleul">
+				<li>
+					<a href="/index">网站首页</a>
+				 </li>
+				<li>
+					<a href="#">暖风活动</a>
+				 </li>
+				<li>
+					<a href="#">亲子活动</a>
+				 </li>
+				 <li>
+					 <a href="#">帮扶</a>
+				 </li>
+				 <li>
+					 <a href="#">关于我们</a>
+				 </li>
+				 <li>
+					 <a href="#">联系我们</a>
+				 </li>
+			</ul>
+		</div>
+	</div>
+	
+	<!--
+    活动标题
+	-->
+<div class="main-content">
+	<div class="active">
+	    <h1>测试中</h1>
+		<div class="under_article">
+			<div class="sub_head">
+				<div class="sub_heading_con">
+					<span class="sub_heading_item" title="分类">分类：暖风活动</span>
+					<span class="sub_heading_item">发布时间：{{ releasetime}}</span>
+					<span class="sub_heading_item">发布组织：暖风机构</span>
+			</div>
+		</div>
+		</div>
+	
+	</div>	
+</div>
+	<!--
+	活动详细内容
+	-->
+<div class="main-content-one wl1350">
+	<div class="main-content-active">
+		
+		<div class="main-content-body">
+<!--
+			<img class="activeimg" alt="暖风活动" src="picture/sogood.jpg"/>
+
+-->
+
+
+			        <div class="news_pic">
+		                		<img id="picture" src="{% static "picture/sogood.jpg"%}"/>
+                    </div>
+              <script>
+                       <!--var a="sogood.jpg";-->
+                        <!--alert(a);-->
+                        <!--var b="{% static "picture/";-->
+                        <!--var c=b.concat(a,""%}");-->
+                        <!--document.getElementById("picture").src=c;-->
+                    </script>
+
+                    <div class="phase_item">
+                        <p class="phase">【活动时间】</p>
+                        <p class="phase">{{ releasetime}} 至 {{ closetime }} 17:00</p>
+                    </div>
+                    <div class="phase_item">
+                        <p class="phase">【联系方式】</p>
+                        <p class="phase">联系人： {{ contactpeople}}</p>
+                        <p class="phase">联系电话： {{ contactphone }}</p>
+                    </div>
+                    <div class="phase_item">
+                        <p class="phase">【详细地址】</p>
+                        
+                        <p class="phase">
+                        {{ place }}
+                        </p>
+                   
+                    </div>
+                      
+                    <div class="phase_item">
+                        <p class="phase">
+                         
+                    	 【活动简介】
+                        </p>
+                        <p class="phase">{{ shortcontent }}</p>
+                    </div>
+                    <div class="phase_item">
+                        <p class="phase">
+                        	
+                    		【服务内容】</p>
+                        <p class="phase">{{ content }}</p>
+                    </div>
+                    
+                    <div class="phase_item">
+                        <p class="phase">【服务要求】</p>
+                        <p class="phase">{{ servicerequirement }} </p>
+                    </div>
+                    
+		</div>
+	</div>	
+	<div class="content_one_right" >
+		<div class="baoming">
+		 	<p>报名人数：{{ numberpeople }}人</p>
+		</div>
+		<div class="baoming-2">
+			<div class="love">
+				<img src="picture/icost.png"/>
+				<p>感兴趣</p>
+				<p>20人</p>
+			</div>
+			<div class="love">
+				<img src="picture/iconst2.png"/>
+				<p>招募人数</p>
+				<p>20人</p>
+			</div>
+			<div class="love" style="margin-right: 0px">
+				<img src="picture/iconst3.png" />
+				<p>关注</p>
+				<p>30人</p>
+			</div>
+		</div>
+    	<div class="join">
+			<p>
+			 <a href="#" style="text-decoration: none;color: #000000">马上报名</a>
+			</p>
+		</div>
+	</div>
+</div>
+	<!--
+	活动报名
+-->
+
+</body>
+</html>

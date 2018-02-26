@@ -1,0 +1,1338 @@
+﻿{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta charset="utf-8" />
+	<title>暖风公益机构</title>
+	<meta name="keywords" content="关键词1,关键词2,关键词3" />
+	<meta name="description" content="暖风公益" />
+	<meta http-equiv="Cache-Control" content="no-transform" />
+				<link rel="stylesheet" type="text/css" href="{% static "css/modules.css" %}" />
+	<link rel="stylesheet" type="text/css" href="{% static "css/common.css" %}" />
+	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}" />
+		<style type='text/css'>
+		.g-main,.g-hd-inner,.g-ft-inner{ width:1156px;}
+		.g-ft,.g-hd-outer{min-width:1156px;}
+	    .g-ft{width:100%;position:static;min-height:80px;background: url({% static "images/20180123113000_75937.jpg" %}) ;}
+		</style>
+		  <script type="text/javascript" src="{% static "js/jquery-1.8.3.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "js/1.js" %}"></script>
+		<script type="text/javascript">
+		var WEBQEUESTURL = window.location.href.toLowerCase();
+		if((WEBQEUESTURL.indexOf('%3c')>0 && WEBQEUESTURL.indexOf('%3e')>0) || (WEBQEUESTURL.indexOf('<')>0 && WEBQEUESTURL.indexOf('>')>0)){
+			window.location.href = '/404.html';
+		}
+		var WEB_ROOT = 'http://a00697t.demo.guanwangyun.com';
+		$(function() {
+			$("img.lazyload").lazyload({failure_limit:100, effect:"fadeIn", skip_invisible:false, threshold:200});
+		});
+		/* 初始化宽度 */
+		var MainDocumentWidth = '1156';
+		if(MainDocumentWidth!=""){
+			if(MainDocumentWidth>$(window).width()){
+				$('.g-document').width(MainDocumentWidth);
+			}
+		}
+		
+			</script>
+
+<!-- 首部功能插件 end -->
+</head>
+<body>
+<!-- 头部插件注入区 -->
+<script type="text/javascript" src="{% static "js/layer.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/common.js" %}"></script>
+
+<!--  页面右侧在线客服开始  -->
+	<link href="{% static "css/sidenav7_right.css" %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static "css/green.css" %}" rel="stylesheet" type="text/css" />
+
+<div id="sn7_leftsead">
+    <ul>
+	   <li>
+		
+		
+											
+								         
+        	
+		    <li>
+            <a class="sn7_weixin">
+                <div class="sn7_hides">
+                    <p>微信扫码</p>
+                    					 <img src="{% static "picture/urlcode.png"%}">
+					                </div>
+                <div class="shows"><img src="{% static "picture/r_wx.png" %}"/></div>
+                
+            </a>
+        </li>
+		
+											
+								         
+        	
+		
+											
+				        <li>
+            <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=&amp;site=qq&amp;menu=yes" target="_blank">
+                <div class="sn7_hides">
+                    <p>在线客服</p>
+                </div>
+                <div class="shows"><img src="{% static "picture/r_qq.png" %}" /></div>
+            </a>
+
+        </li>
+						         
+        	
+		
+			        <li>
+            <a href="/order/index.php" target="_blank">
+                <div class="sn7_hides" >
+                    <p>用户中心</p>
+                </div>
+                <div class="shows"><img src="{% static "picture/r_grzx.png" %}"/></div>
+            </a>
+        </li>
+										
+								         
+        	
+		
+											
+								         
+        	
+		
+							<li>
+					<a id="set_login_fx" target="_blank">
+			                <div class="sn7_hides" >
+                    <p>我要推广</p>
+                </div>
+                <div class="shows"><img src="{% static "picture/fenxiao.png" %}" /></div>
+            </a>
+        </li>
+								
+								         
+        	
+		
+											
+								         
+        	
+		
+											
+								         
+        	
+		
+											
+								         
+        	
+		
+											
+		        <li>
+            <a href="/message.php" target="_blank">
+                <div class="sn7_hides">
+                    <p>意见反馈</p>
+                </div>
+                <div class="shows"><img src="{% static "picture/r_yjfk.png"%}"/></div>
+            </a>
+        </li>
+								         
+        
+
+        <!--<li>
+            <a href="javascript:;" target="_blank">
+                <div class="sn7_hides">
+                    <p>010-22228888</p>
+                </div>
+                <div class="shows"><img src="{% static "picture/r_phone.png" %}" /></div>
+            </a>
+        </li>-->
+		
+        <li>
+            <a id="top_btn" href="javascript:;">
+                <div class="sn7_hides"> <img src="{% static "picture/ll07.png" %}" width="131" height="49" /></div>
+                <div class="shows"> <img src="{% static "picture/l06.png" %}" width="47" height="49" /></div>
+            </a>
+        </li>
+
+    </ul>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#sn7_leftsead a").hover(function(){
+        if($(this).prop("className")=="sn7_weixin"){
+            $(this).children("div.sn7_hides").show();
+        }else{
+            $(this).children("div.sn7_hides").show();
+            if($(this).prop("className")!='wrt'){
+                $(this).children("div.shows").hide();
+            }
+            $(this).children("div.sn7_hides").animate({marginRight:'0px'},'fast'); 
+        }
+    },function(){ 
+        if($(this).prop("className")=="sn7_weixin"){
+            $(this).children("div.sn7_hides").hide('fast');
+        }else{
+            $(this).children("div.sn7_hides").animate({marginRight:'-143px'},'fast',function(){$(this).hide();$(this).next("div.shows").show();});
+        }
+    });
+    $("#top_btn").click(function(){if(scroll=="off") return;
+    $("html,body").animate({scrollTop: 0}, 300);});
+
+});
+</script>
+<!--  页面右侧在线客服结束  -->
+ <script>
+$("#fx_applypc").click(function(){
+	$.layer({
+		type:2,
+		title:'',
+		area:['560px','320px'],
+		offset:['180px',''],
+		iframe:{src:"/account/fenxiao.php?type=fx_apply"}
+	});
+});
+$("#fx_tgpc").click(function(){
+	$.layer({
+		type:2,
+		title:'',
+		area:['565px','640px'],
+		offset:['10px',''],
+		iframe:{src:"/account/fenxiao.php?type=fx_tuiguang"}
+	});
+});
+$("#fx_fxpc").click(function(){
+	$.layer({
+		type:2,
+		title:'',
+		area:['565px','640px'],
+		offset:['10px',''],
+		iframe:{src:"/account/fenxiao.php?type=fx_fenxiang"}
+	});
+});
+</script><!-- 头部 -->
+<div class='g-document'>
+<header class="g-hd">
+<div class='g-hd-outer'>
+<div class="g-hd-inner g-hd-limit">
+	<!-- 头部980 -->
+		<div class='g-hd-edit'>
+		<!-- 头部自定义模块 -->
+				<!-- 头部自定义模块 end -->
+		<!-- LOGO -->
+				<div class="m-logo"   style="position:relative;top:9px;left:-1px;" id="set_logo">
+			<a href="/"><img src="{% static "picture/logo .jpg" %}" alt=""  style="width: 150px; height: 150px;"></a>
+		</div>
+		
+		<!-- LOGO end -->
+		<div class="m-hd-top">
+			<!--是否显示整体注册条-->
+			<style type="text/css">
+				#m-head-regist{
+				display: {{ display }};
+				}
+				#m-head-regist22 {
+				display: {{ displaytwo }};
+				}
+			</style>
+
+			<div class="m-head-regist" id="m-head-regist">
+						<span id='set_userbox' style="width: 150px;" >
+				<a class="u-hd-btn" id='set_login'  href="#"    onclick="login()" style="float:left; text-align:center;height: auto;width: 46px;background-color: #26BE60;">登陆</a> 
+				<a class="u-hd-btn" id='set_register'  href="/register"  onclick="register()" style="float: right; text-align:center;height: 20px;width: 46px;background-color: #26BE60;">注册</a>
+						</span>
+				<div class="clearing">
+				</div>
+			</div>
+			<div class="m-head-regist2" id="m-head-regist22">
+				<p>欢迎用户：{{username}}</p>
+			</div>
+		<!--
+        	作者：helloguguobao@gmail.com
+        	时间：2018-02-08
+        	描述：登录
+        -->
+
+	 <div id="LoginBox">
+        <div class="row1">
+            	登录账号窗口<a href="javascript:void(0)" title="关闭窗口" class="close_btn" id="closeBtn">×</a>
+        </div>
+        <div class="row">
+            用户名: <span class="inputBox">
+                <input type="text" id="txtName" placeholder="账号/邮箱" />
+            </span><a href="javascript:void(0)" title="提示" class="warning" id="warn">*</a>
+        </div>
+        <div class="row">
+            密&nbsp;&nbsp;&nbsp;&nbsp;码: <span class="inputBox">
+                <input type="password" id="txtPwd" placeholder="密码" />
+            </span><a href="javascript:void(0)" title="提示" class="warning" id="warn2">*</a>
+        </div>
+        <div class="row">
+            <a href="#" id="loginbtn" onclick="login()">登录</a>
+        </div>
+    </div>
+     <!--
+        	作者：helloguguobao@gmail.com
+        	时间：2018-02-03
+        	描述：登陆窗口css
+        -->
+        <style type="text/css">
+        	#LoginBox{
+        		position:absolute;
+        		left:460px;
+        		top:150px;
+        		background:white;
+        		width:426px;
+        		height:282px;
+        		border:3px solid #444;
+        		border-radius:7px;
+        		z-index:10000;
+        		display:none;}
+
+			.mask{
+				margin:0;
+				padding:0;
+				border:none;
+				width:100%;
+				height:100%;
+				background:#333;
+				opacity:0.6;
+				filter:alpha(opacity=60);
+				z-index:9999;
+				position:fixed;
+				top:0;left:0;
+				display:none;}
+			.row1{
+				background:#f7f7f7;
+				padding:0px 20px;
+				line-height:50px;
+				height:50px;
+				font-weight:bold;
+				color:#666;
+				font-size:20px;}
+			.row{
+				height:77px;
+				line-height:77px;
+				padding:0px 30px;
+				font-family:华文楷体;
+				font-size:x-large;
+				}
+			.close_btn{
+				font-family:arial;
+				font-size:30px;
+				font-weight:700;
+				color:#999;
+				text-decoration:none;
+				float:right;
+				padding-right:4px;
+				
+				}
+			.inputBox{
+				border:1px solid #c3c3c3;
+				padding:1px 3px 6px 3px;
+				border-radius:5px;
+				margin-left:5px;}
+			#txtName{
+				height:27px;
+			width:230px;
+			border:none;}
+			#txtPwd{
+				height:27px;
+				width:230px;
+				border:none;}
+			#loginbtn{
+				color:White;
+				background:#4490f7;
+				text-decoration:none;
+				padding:10px 95px;
+				margin-left:87px;
+				margin-top:40px;
+				border-radius:5px;
+				opacity:0.8;
+				filter:alpha(opacity=80);}
+			.warning{
+				float:right;
+				color:Red;
+				text-decoration:none;
+				font-size:20px;
+				font-weight:bold;
+				margin-right:20px;
+				display:none;}
+        </style>
+			<!--
+            	作者：helloguguobao@gmail.com
+            	时间：2018-02-08
+            	描述：登陆js
+            -->
+			{% csrf_token %}
+		 <script type="text/javascript">
+    	$(function($){
+    		$("#set_login").on('click', function () {
+			$("body").append("<div id='mask'></div>");
+			$("#mask").addClass("mask").fadeIn("slow");
+			$("#LoginBox").fadeIn("slow");
+		});
+		//按钮的透明度
+		$("#loginbtn").hover(function () {
+			$(this).stop().animate({
+				opacity: '1'
+			}, 600);
+		}, function () {
+			$(this).stop().animate({
+				opacity: '0.8'
+			}, 1000);
+		});
+    		//文本框不允许为空---按钮触发
+		$("#loginbtn").on('click', function () {
+			var txtName = $("#txtName").val();
+			var txtPwd = $("#txtPwd").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
+					$(".warning").css({ display: 'block' });
+				}
+				else {
+					$("#warn").css({ display: 'block' });
+					$("#warn2").css({ display: 'none' });
+				}
+			}
+			else {
+				if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
+					$("#warn").css({ display: 'none' });
+					$(".warn2").css({ display: 'block' });
+				}
+				else {
+					$(".warning").css({ display: 'none' });
+	//这是登陆判断成功
+
+					$('html').ajaxSend(function(event, xhr, settings) {
+					 function getCookie(name) {
+					  var cookieValue = null;
+					  if (document.cookie && document.cookie != '') {
+					   var cookies = document.cookie.split(';');
+					   for (var i = 0; i < cookies.length; i++) {
+						var cookie = jQuery.trim(cookies[i]);
+						// Does this cookie string begin with the name we want?
+						if (cookie.substring(0, name.length + 1) == (name + '=')) {
+						 cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+						 break;
+						}
+					   }
+					  }
+					  return cookieValue;
+					 }
+					 if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+					  // Only send the token to relative URLs i.e. locally.
+					  xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+					 }
+					});
+
+					$.post("/login/",
+					{'name':txtName,
+					 'password':txtPwd
+					},
+					function(red){
+					     //   alert(red);
+						if(red=='0')
+							alert("密码错误");
+						else
+						 document.write(red)
+					}
+					)
+				}
+			}
+		});
+		//文本框不允许为空---单个文本触发
+		$("#txtName").on('blur', function () {
+			var txtName = $("#txtName").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				$("#warn").css({ display: 'block' });
+			}
+			else {
+				$("#warn").css({ display: 'none' });
+			}
+		});
+		$("#txtName").on('focus', function () {
+			$("#warn").css({ display: 'none' });
+		});
+		//
+		$("#txtPwd").on('blur', function () {
+			var txtName = $("#txtPwd").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				$("#warn2").css({ display: 'block' });
+			}
+			else {
+				$("#warn2").css({ display: 'none' });
+			}
+		});
+		$("#txtPwd").on('focus', function () {
+			$("#warn2").css({ display: 'none' });
+		});
+		//关闭
+		$(".close_btn").hover(function () { $(this).css({ color: 'black' }) }, function () { $(this).css({ color: '#999' }) }).on('click', function () {
+			$("#LoginBox").fadeOut("fast");
+			$("#mask").css({ display: 'none' });
+		});
+	});
+    	
+    </script>
+		<div class="clearing"></div>
+									
+
+
+ <!-- 导航开始 strat -->
+<!-- 浮动fixed -->
+<div class="">
+<div class='m-newnav' id='set_menu'>
+<link href="{% static "css/common_1.css" %}" rel="stylesheet" type="text/css" />
+<style class='m-newnav-style'>
+
+/*绿色*/
+.navList li:hover:after{background: #090;}
+.m-newnav ul li .m-nav-coustom{background: #090;}
+.m-newnav ul li li a:hover{color: #090 !important;}
+.m-newnav ul .first-li:hover{border-bottom: 3px solid #090;}
+.m-newnav ul li:hover a{color: #090;}
+
+
+
+/*导航样式*/
+
+.m-newnav { background: #fff; height:71px;}
+.navList{ padding-left:3px;}
+.m-newnav .navList li{ position:relative; z-index:999; _display:inline;  font-size:18px;}
+.navList .first-li:hover:after{ height:71px; }
+.m-newnav ul{position: relative;}
+.navList li li:after{background: none; color:#fff;}
+.m-newnav ul li ul {width:150px !important;position: absolute;top: 71px;left:50%;margin-left:-75px;z-index:9899;overflow: hidden;background: #000;}
+.m-newnav ul li ul li{width:150px !important;height: 60px !important;text-align: center;}
+.navList li li a{ color: #fff;}
+.navList a{ display:inline-block; height: 71px; line-height: 71px; color:#fff;overflow: hidden;}
+.navList .last,.productNav .navCont .navList .last{ background:none !important;}
+.navList .active,.navList a:hover{ position:relative; z-index:100; }
+.navList .hoverActive{ position:relative; z-index:100;}
+.navList .hoverActive a{ background:none;}
+
+.m-newnav ul .first-li{padding: 0 15px;}
+.m-newnav ul li .first-a { width: 100%;height: 68px !important;line-height: 71px; color: #000;font-size: 13px;}
+.m-newnav ul li li a {width:100%;margin: 0px;color: #fff !important;height: 60px !important;line-height: 60px; color: #666;font-size: 13px;overflow: hidden;}
+
+/*浮动*/
+.menu_fixed { position: fixed; top: 0px; left:0;right:0; z-index: 9999;}
+.menu_fixed .m-newnav{ height: 71px; line-height: 71px; margin-top:0px;}
+
+.navCont { width: 830px;margin: 0 auto;}
+#coreNav {  display:inline-block; }
+
+
+.m-newnav ul li .m-nav-coustom{position: absolute;top:71px;display:none;text-align:left;color:white;}
+.m-newnav .m-nav-coustom ul,.m-newnav .m-nav-coustom ul li, .m-newnav .m-nav-coustom ul li a, .m-newnav .m-nav-coustom a{fwidth:auto;height:auto;z-index:0;margin:0;padding:0;line-height:inherit;visibility:none;}
+.m-newnav .m-nav-coustom ul,.m-newnav .m-nav-coustom ul li{position:static;top:0;left:0;text-align:left;display:inline;}
+
+
+.m-newnav .select { background: none;}
+
+</style>
+    <div class="navCont">
+    <div class="navCont_s" style="margin: 0 !important;width: 100% !important;text-align:  center; "> 
+        <!-- 主菜单 -->
+        <ul id="coreNav" class="navList clearfix">
+        	
+             			<li class="active first-li">  
+			<span style="display:none"></span>
+            								<a class="first-a" href="/index" >网站首页</a>
+				                        			            </li>
+					<li class="active first-li">  
+			<span style="display:none"></span>
+            								<a class="first-a" href="/product.html" >暖风活动</a>
+				                        			            </li>
+					<li class="active first-li">  
+			<span style="display:none"></span>
+            								<a class="first-a" href="/news.html" >亲子活动</a>
+				                        			            </li>
+					<li class="active first-li">  
+			<span style="display:none"></span>
+            								<a class="first-a" href="/message.html" >帮扶</a>
+				                        			            </li>
+					<li class="active first-li">  
+			<span style="display:none"></span>
+            								<a class="first-a" href="/help" >关于我们</a>
+				                        			            </li>
+					<li class="active first-li">  
+			<span style="display:none"></span>
+            								<a class="first-a" href="/contact.html" >联系我们</a>
+				                        			            </li>
+		 
+        </ul>                 
+    </div>
+
+
+<div style="clear:both"></div>
+<script type="text/javascript">
+var SYSPAGEURL = window.location.pathname + window.location.search;
+if(SYSPAGEURL=='/index.html' || SYSPAGEURL=='/index.php' || SYSPAGEURL==''){
+    SYSPAGEURL = '/';
+}
+$(document).ready(function(){
+        $('.m-newnav').levelmenu();
+    
+    $(".m-newnav .select").removeClass('select');
+    $(".m-newnav a[href='" + SYSPAGEURL + "']").parent().addClass('select');
+});
+
+$.fn.levelmenu = function(){
+    $(this).css('overflow','visible');
+    $(this).css('z-index','999');
+    var overmax = false;
+    var parent = this;
+    $('>ul>li', this).each(function(){
+        if(overmax){
+            $('<li>'+$(this).html()+'</li>').appendTo($('.more', parent));
+            $(this).remove();
+        }else{
+            if($(this).next().length>0){
+                if($(this).offset().left > $(this).next().offset().left){
+                    $('<li><a href="#">更多</a><ul class="more"></ul></li>').appendTo($(">ul", parent));
+                    $('.more', parent).addClass('last');
+                    $('<li>'+$(this).html()+'</li>').appendTo($('.more', parent));
+                    $(this).remove();
+                    overmax = true;
+                }
+            }else{
+                if($(this).find('ul ul:first').length>0){
+                    $(this).find('ul:first').addClass('last');
+                }
+            }
+        }
+    });
+
+    $("ul ul", this).css({display: "none"});
+    $("ul li", this).hover(
+        function(){
+            $(this).addClass('select').find('div:first,ul:first').css({visibility: "visible",display: "none"}).slideToggle(400);
+        },function(){
+            $(this).removeClass('select').find('div:first,ul:first').css({visibility: "hidden"});
+            $(".m-newnav a[href='" + SYSPAGEURL + "']").parent().addClass('select');
+        }
+    );
+};
+
+//导航浮动
+$(function(){
+var top_menu = $('.m-newnav');
+var _width = $(window).width();
+top_menu.parent().removeClass('menu_fixed');
+$(window).scroll(function(){
+    var scroH = $(this).scrollTop();
+
+    if(scroH > $(".g-hd-outer").height()){
+        top_menu.parent().addClass('menu_fixed');
+    }           
+    else{
+        top_menu.parent().removeClass('menu_fixed');
+    }
+})  
+})
+
+
+
+
+</script>   <!-- 头部980 end -->
+</div>
+</div>
+</div>
+  <!-- 导航结束 end -->								</div>
+								
+							</div>
+							
+							<div class="clearing"></div>
+							
+						</div>
+
+					</div>
+
+					<!-- 头部980 end -->
+					
+				</div>
+			</div>
+			<div class="clearing"></div>
+<!-- 头部 end1 -->
+<div class="m-focus" id="set_focus">
+<style type='text/css'>
+
+	.m-focus, .m-focus .bd li, .m-focus .bd li a{height:650px}
+	.m-focus{width:100%;position:relative;}
+	.m-focus .bd{margin:0 auto;position:relative;z-index:0;width: 100%; overflow: hidden;}
+	.m-focus .bd ul{width:100% !important;}
+	.m-focus .bd li{width:100% !important;overflow:hidden;text-align:center; background-repeat:no-repeat; background-position:center 0;}
+	.m-focus .bd li a{display:block; }
+	.m-focus .hd{width:100%;position:absolute; z-index:1; bottom:0; left:0; height:30px; line-height:30px;}
+	.m-focus .hd ul{text-align:center;}
+	.m-focus .hd ul li{cursor:pointer; display:inline-block; *display:inline; zoom:1; width:42px; height:11px; margin:1px; overflow:hidden; background:#000;filter:alpha(opacity=50);opacity:0.5;  line-height:999px; }
+	.m-focus .hd ul .on{background:#f00;}
+	.m-focus .prev,.m-focus .next{display:block;  position:absolute; z-index:1; top:50%; margin-top:-30px; left:9%;  z-index:1; width:40px; height:60px; background:url({% static "images/slider-arrow.png" %}) -126px -137px #000 no-repeat;  cursor:pointer; filter:alpha(opacity=50);opacity:0.5; display:none;  }
+	.m-focus .next{left:auto; right:9%; background-position:-6px -137px;}
+	
+	.m-focus .bd .focus-search{position: absolute;z-index: 2;top:50%;left: 50%;}
+	.m-focus .focus-search .u-search-key{height: 30px;line-height:30px;color: #ccc;font-size: 12px;font-weight:500;font-family:"微软雅黑";vertical-align:middle;color: #444;border:none;padding-left:10px;border-radius: 4px;background: rgba(237,237,237,0.8);}
+	.m-focus .focus-search .u-search-btn{width:36px;height:30px;border:none; no-repeat center;vertical-align:middle;}
+
+/*默认 颜色*/
+.focus-search .u-search-btn {  background: url({% static "images/go_default.gif" %}) no-repeat center; }
+/*蓝色*/
+.focus-search .u-search-btn {  background: url({% static "images/go_blue.gif" %}) no-repeat center; }
+</style>
+<script type="text/javascript" src="{% static "js/jquery.form.js"%}"></script>
+	
+	<div class="bd">
+		 <!--搜索框 开始 -->
+	    <div  id='set_search'   class="focus-search">
+			<input type="text" class="u-search-key" placeholder="请输入搜索内容" style="width:300px;" >
+			<input type="button" class="u-search-btn">
+		</div>
+	    <!--搜索框 结束 -->
+		<ul>
+						<li  >
+							<img src="{% static "picture/青少年志愿.png" %}"
+						</li>		
+						<li >
+							<img src="{% static "picture/青少年志愿.png" %}"
+						</li>		
+					</ul>
+	</div>
+
+	<div class="hd"><ul></ul></div><!--屏蔽下面按钮-->
+	<span class="prev"></span>
+	<span class="next"></span>
+<script type="text/javascript">
+	function RunFocus(){
+		jQuery(".m-focus").hover(function(){ jQuery(this).find(".prev,.next").stop(true,true).fadeTo("show",0.5) },function(){ jQuery(this).find(".prev,.next").fadeOut() });
+
+		jQuery(".m-focus").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",  autoPlay:true, autoPage:true, trigger:"click",
+			startFun:function(i){
+				var curLi = jQuery(".m-focus .bd li").eq(i);
+				if( !!curLi.attr("_src") ){
+					curLi.css("background-image",curLi.attr("_src")).removeAttr("_src");
+				}
+			}
+		});
+	}
+	RunFocus();
+	var sWidth = $('.m-focus .bd .focus-search').width()/2;
+	var sHeight = $('.m-focus .bd .focus-search').height()/2;
+	$('.m-focus .bd .focus-search').css('margin-left',-sWidth);
+	$('.m-focus .bd .focus-search').css('margin-top',-sHeight+126);
+</script>
+</div>
+<!-- 拖拽980 -->
+</header><div class="g-main">
+<script src="{% static "js/scrollreveal.js" %}"></script>
+<script>
+	$(function(){
+		window.scrollReveal = new scrollReveal();
+	})
+</script>
+
+<!-- 站点公告中心模块 -->
+<div class="m-wg m-default m-default-default" id="visualmodule_1" style='width:1152px;height:227px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:-480px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+		<style type='text/css' class='m-wg-ct-style'>#visualmodule_1 .m-wg-ct{font-family:inherit;background-color:transparent;}</style>	<div class="m-wg-ct">
+		<div class='m-theme28'><style>
+.hey{    margin-left: 145px;}
+.hey li{float: left; list-style: none; text-align: center;padding: 10px 35px;margin-left: 40px;color:#ffffff;}
+#visualmodule_1{position:relative;z-index:1;}
+#visualmodule_1 .m-wg-ct{position:absolute; }
+</style>
+<div style="font-size:60px;color:#000000;line-height:60px;text-align:center;width:1153px;">
+	<span>公益，让生活更美好</span> 
+</div>
+<div style="font-size:20px;color:#ffffff;line-height:60px;text-align:center;">
+	WONDERFUL CONTRIBUTE,COLORFUL LIFE!
+</div>
+
+			
+<div class="hey">
+
+</div></div>
+
+	</div>
+</div>
+<!-- 模块 end  duangou-->
+<!-- 站点公告中心模块 -->
+<div class="m-wg m-default m-default-default" id="visualmodule_3" style='width:1153px;height:35px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:20px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+			<div class="m-wg-ct">
+		<div class='m-theme28'><div style="float:left;">
+	<p style="font-size:20px;font-weight:bold;">
+		公益活动&nbsp;&nbsp;<span style="font-size:12px;font-weight:100;">你的付出，是山区黎明的一道曙光</span> 
+	</p>
+</div>
+<a href="#"> 
+<div style="float:right;color:#4ab344;">
+	<p style="font-size:12px;font-weight:bold;">
+		查看更多 》
+	</p>
+</div>
+</a></div>
+	</div>
+</div>
+<!-- 模块 end  duangou-->
+<!-- 模块 #公益活动-->
+<div class="m-wg m-default m-default-green" id="visualmodule_2" style='width:1148px;height:289px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:-20px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+		<style type='text/css' class='m-wg-ct-style'>#visualmodule_2 .m-wg-ct{font-family:inherit;padding-left:0px;}</style>	<div class="m-wg-ct">
+		<!-- 图片2栏目 -->
+		<div class="m-theme259">
+			<div class="clearing"></div>
+									<div class="m-theme259-list" data-scroll-reveal="enter top over 1s">
+				<div class="m-theme259-img">
+					<a href="/active?a=001" target="_blank"><img class='lazyload' data-original="{%static "picture/logo .jpg"%}" ></a>
+				</div>
+				<div class="m-theme259-title">
+				<a href="/active?a=001" target="_blank">暖分公益机构将在东莞理工举行</a>
+				</div>
+				<div>
+					<span class="u-price"><em><span style="color:#999;">人数：</span></em>49.00</span>
+					<span class="u-number">还缺：56人</span>
+				</div>
+			</div>
+									<div class="m-theme259-list" data-scroll-reveal="enter top over 1s">
+				<div class="m-theme259-img">
+					<a href="/active?a=002" target="_blank"><img class='lazyload' data-original="{%static "picture/logo .jpg"%}" ></a>
+				</div>
+				<div class="m-theme259-title">
+				<a href="/active?a=002" target="_blank">暖分公益机构将在东莞理工举行</a>
+				</div>
+				<div>
+					<span class="u-price"><em><span style="color:#999;">人数：</span></em>49.00</span>
+					<span class="u-number">还缺：56人</span>
+				</div>
+			</div>
+									<div class="m-theme259-list" data-scroll-reveal="enter top over 1s">
+				<div class="m-theme259-img">
+					<a href="/active?a=003" target="_blank"><img class='lazyload' data-original="{%static "picture/logo .jpg"%}" ></a>
+				</div>
+				<div class="m-theme259-title">
+				<a href="/active?a=003" target="_blank">需要一堆人打开附件网线收款方</a>
+				</div>
+				<div>
+					<span class="u-price"><em><span style="color:#999;">人数：</span></em>49.00</span>
+					<span class="u-number">还缺：56人</span>
+				</div>
+			</div>
+									<div class="m-theme259-list" data-scroll-reveal="enter top over 1s">
+				<div class="m-theme259-img">
+					<a href="/active?a=004" target="_blank"><img class='lazyload' data-original="{%static "picture/logo .jpg"%}" ></a>
+				</div>
+				<div class="m-theme259-title">
+				<a href="/active?a=004" target="_blank"> 从广东省分公司的分工分公司公司发货</a>
+				</div>
+				<div>
+					<span class="u-price"><em><span style="color:#999;">人数：</span></em>49.00</span>
+					<span class="u-number">还缺：56人</span>
+				</div>
+			</div>
+						<div class="clearing"></div>
+		</div>
+		<!-- 图片2栏目 end -->
+	</div>
+</div>
+<!-- 站点公告中心模块 ：1+1+1亲子活动行 -->
+<div class="m-wg m-default m-default-default" id="visualmodule_20" style='width:1153px;height:35px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:20px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+			<div class="m-wg-ct">
+		<div class='m-theme28'><div style="float:left;">
+	<p style="font-size:20px;font-weight:bold;">
+		1+1+1亲子活动行&nbsp;&nbsp;<span style="font-size:12px;font-weight:100;">体验山区之生活，推动当地发展</span> 
+	</p>
+</div>
+<a href="#"> 
+<div style="float:right;color:#4ab344;">
+	<p style="font-size:12px;font-weight:bold;">
+		查看更多 》
+	</p>
+</div>
+</a></div>
+	</div>
+</div>
+<!-- 模块 end  1+1+1亲子活动行具体活动-->
+<!-- 模块 -->
+<div class="m-wg m-default m-default-default" id="visualmodule_21" style='width:1148px;height:489px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:-20px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+		<style type='text/css' class='m-wg-ct-style'>#visualmodule_21 .m-wg-ct{font-family:inherit;padding-left:0px;}</style>	<div class="m-wg-ct">
+		<!-- 图片栏目 -->
+		<div class="m-theme297">
+						<div class="m-theme297-list" data-scroll-reveal="enter from the top and move 300px over 1s">
+				<div class="m-theme297-img">
+									<a href="/teamview_2320540.html" target="_blank">
+										<img class='lazyload' data-original="http://cdn047.yun-img.com/static/upload/a00697t/team/20180122112126_29453.jpg" alt="韶关黄浦镇荷花村古某某家体验生活">
+					</a>
+				</div>
+				<div class="m-theme297-title" >
+									<a href="/teamview_2320540.html" target="_blank">韶关黄浦镇荷花村古某某家体验生活</a>
+					
+				</div>
+							</div>
+						<div class="m-theme297-list" data-scroll-reveal="enter from the top and move 300px over 1s">
+				<div class="m-theme297-img">
+									<a href="/teamview_2320533.html" target="_blank">
+										<img class='lazyload' data-original="http://cdn043.yun-img.com/static/upload/a00697t/team/20180122115419_71746.jpg" alt="韶关黄浦镇荷花村古某某家体验生活">
+					</a>
+				</div>
+				<div class="m-theme297-title" >
+									<a href="/teamview_2320533.html" target="_blank">韶关黄浦镇荷花村古某某家体验生活</a>
+					
+				</div>
+							</div>
+						<div class="f-clear">&nbsp;</div>
+		</div>
+		<!-- 图片栏目 end -->
+	</div>
+</div>
+<!-- 模块 end  duangou-->
+<script type="text/javascript">
+	function fx_all(tid){
+		$.layer({
+			type:2,
+			title:'',
+			area:['480px','600px'],
+			offset:['30px',''],
+			iframe:{src:"/fx_view.php?id="+tid+"&selid=&port=pc"}
+		});
+	}
+</script><!-- 模块 -->
+<div class="m-wg m-default m-default-default" id="visualmodule_25" style='width:1148px;height:289px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:-10px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+		<style type='text/css' class='m-wg-ct-style'>#visualmodule_25 .m-wg-ct{font-family:inherit;padding-left:0px;}</style>	<div class="m-wg-ct">
+		<!-- 图片2栏目 -->
+		<div class="m-theme259">
+			<div class="clearing"></div>
+									<div class="m-theme259-list" data-scroll-reveal="enter top over 1s">
+				<div class="m-theme259-img">
+					<a href="/teamview_2333805.html" target="_blank"><img class='lazyload' data-original="http://cdn045.yun-img.com/static/upload/a00697t/team/20180122165756_98157.jpg" ></a>
+				</div>
+				<div class="m-theme259-title">
+				<a href="/teamview_2333805.html" target="_blank">韶关黄浦镇荷花村哈某某家体验生活</a>
+				</div>
+				<div>
+					<span class="u-price"><em><span style="color:#999;">价格：</span>￥</em>990.00</span>
+					<span class="u-number">体验时间：7天</span>
+				</div>
+			</div>
+									<div class="m-theme259-list" data-scroll-reveal="enter top over 1s">
+				<div class="m-theme259-img">
+					<a href="/teamview_2332953.html" target="_blank"><img class='lazyload' data-original="http://cdn065.yun-img.com/static/upload/a00697t/team/20180122155533_88005.jpg" ></a>
+				</div>
+				<div class="m-theme259-title">
+				<a href="/teamview_2332953.html" target="_blank">韶关黄浦镇荷花村哈某某家体验生活</a>
+				</div>
+				<div>
+					<span class="u-price"><em><span style="color:#999;">价格：</span>￥</em>990.00</span>
+					<span class="u-number">体验时间：7天</span>
+				</div>
+			</div>
+									<div class="m-theme259-list" data-scroll-reveal="enter top over 1s">
+				<div class="m-theme259-img">
+					<a href="/teamview_2332897.html" target="_blank"><img class='lazyload' data-original="http://cdn045.yun-img.com/static/upload/a00697t/team/20180122153415_71611.jpg" ></a>
+				</div>
+				<div class="m-theme259-title">
+				<a href="/teamview_2332897.html" target="_blank">韶关黄浦镇荷花村哈某某家体验生活</a>
+				</div>
+				<div>
+					<span class="u-price"><em><span style="color:#999;">价格：</span>￥</em>990.00</span>
+					<span class="u-number">体验时间：7天</span>
+				</div>
+			</div>
+									<div class="m-theme259-list" data-scroll-reveal="enter top over 1s">
+				<div class="m-theme259-img">
+					<a href="/teamview_2332775.html" target="_blank"><img class='lazyload' data-original="http://cdn043.yun-img.com/static/upload/a00697t/team/20180122143248_62843.jpg" ></a>
+				</div>
+				<div class="m-theme259-title">
+				<a href="/teamview_2332775.html" target="_blank">韶关黄浦镇荷花村哈某某家体验生活</a>
+				</div>
+				<div>
+					<span class="u-price"><em><span style="color:#999;">价格：</span>￥</em>990.00</span>
+					<span class="u-number">体验时间：7天</span>
+				</div>
+			</div>
+						<div class="clearing"></div>
+		</div>
+		<!-- 图片2栏目 end -->
+	</div>
+</div>
+<!-- 站点公告中心模块 #扶贫千万里，服务零距离！-->
+<div class="m-wg m-default m-default-default" id="visualmodule_27" style='width:1153px;height:115px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:20px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+			<div class="m-wg-ct">
+		<div class='m-theme28'><img class='lazyload' data-original="http://cdn037.yun-img.com/static/upload/a00697t/visualtoolkit/20180119160851_49051.jpg" width="1153" height="115" alt="" /> 
+<div style="width:1153px;margin-top:-65px;text-align:center;font-size:40px;color:#457e29;">
+	扶贫千万里，服务零距离！
+</div></div>
+	</div>
+</div>
+<!-- 模块 end  duangou-->
+<!-- 站点公告中心模块 -->
+<div class="m-wg m-default m-default-default" id="visualmodule_28" style='width:570px;height:500px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:20px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+		<style type='text/css' class='m-wg-ct-style'>#visualmodule_28 .m-wg-ct{font-family:inherit;background-color:#26be60;padding-left:30px;padding-top:50px;}</style>	<div class="m-wg-ct">
+		<div class='m-theme28'><div style="width:570px;height:500px;">
+	<p style="font-size:30px;font-weight:bold;color:#ffffff;line-height:30px;">
+		”1+1+1“公益模式
+	</p>
+	<p style="font-size:12px;color:#fff;line-height:30px;">
+		公益团队以“以人为本，永续经营”作为核心理念，在“精准扶贫1➕1➕1模式”的公益道路上不断践行社
+		会责任，服务他人，让公益贴近生活，让爱心温暖社会，以暖风注人心。
+	</p>
+	<div style="margin-top:20px;">
+		<p style="color:#ffffff;line-height:35px;font-size:14px;">
+			主要构成：一个山区家庭、一名大学生、一个城镇家庭
+		</p>
+		<p style="color:#ffffff;line-height:35px;font-size:14px;">
+			商业模式：消费对象就是那些富有家庭想他们孩子体验山区孩子生活，他们通过报名,<br/>
+		    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一起和贫困家庭生活在一起，体验山区的生活						
+		</p>
+		<p style="color:#ffffff;line-height:35px;font-size:14px;">
+			模式特色：以大学生为纽带，精准对接两个家庭，在中间人的正确引导下，以双方家庭<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;的差异实现相互影响。
+		</p>
+		<p style="color:#ffffff;line-height:30px;font-size:14px;">
+			主要目的：通过以双方的长期接触为主，假期接引援助家庭到扶贫地与当地家庭相处为<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;辅，实现双方在思想上、行为上相互影响，并达到激发贫困地区孩子学习欲<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;望，提升该地区学习风气；升华非贫困地区的家庭教育思想，教育孩子戒娇<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;戒躁的效果。
+		</p>
+	</div>
+	<div style="margin-top:20px;">
+		
+	</div>
+</div></div>
+	</div>
+</div>
+<!-- 模块 end  duangou-->
+<!-- 站点公告中心模块  ：视频宣传 -->
+<div class="m-wg m-default m-default-default" id="visualmodule_26" style='width:570px;height:500px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:13px;margin-right:0px;margin-top:20px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+		<style type='text/css' class='m-wg-ct-style'>#visualmodule_26 .m-wg-ct{font-family:inherit;padding-left:0px;padding-top:0px;}</style>	<div class="m-wg-ct">
+		<div class='m-theme28'>
+		<img class='lazyload' data-original="http://cdn035.yun-img.com/static/upload/a00697t/visualtoolkit/20180119164534_25917.jpg" width="570" height="500" alt="" />
+		</div>
+	</div>
+</div>
+<!-- 模块 end  duangou-->
+<!-- 站点公告中心模块 -->
+<div class="m-wg m-default m-default-default" id="visualmodule_31" style='width:1153px;height:35px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:20px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+			<div class="m-wg-ct">
+		<div class='m-theme28'><div style="float:left;">
+	<p style="font-size:20px;font-weight:bold;">
+		义教活动&nbsp;&nbsp;<span style="font-size:12px;font-weight:100;">手握一本书，传递知识与爱</span> 
+	</p>
+</div>
+<a href="#"> 
+<div style="float:right;color:#4ab344;">
+	<p style="font-size:12px;font-weight:bold;">
+		查看更多 》
+	</p>
+</div>
+</a></div>
+	</div>
+</div>
+<!-- 模块 end  duangou-->
+<!-- 站点公告中心模块 : 义教活动报名-->
+<div class="m-wg m-default m-default-default" id="visualmodule_30" style='width:1154px;height:197px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:20px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+			<div class="m-wg-ct">
+		<div class='m-theme28'><style>
+.tup{}
+.tup li{float: left;width: 370px;height:200px;list-style: none; margin-left: 0px;position:relative;}
+.tup li .tm{width: 370px; height: 40px; background-color: rgba(0, 0, 0, 0.4);position: absolute;bottom:0px;color:  #fff;line-height: 40px; font-size: 12px;text-align: center;}
+</style>
+<div class="tup">
+	<ul>
+		<a href="#"> 
+		<li>
+			<div class="tm">
+				韶关市黄浦镇荷花村荷花小学义教
+			</div>
+<img class='lazyload' data-original="http://cdn053.yun-img.com/static/upload/a00697t/visualtoolkit/20180119170638_74686.jpg" alt="" /> 
+		</li>
+</a> <a href="#"> 
+		<li style="margin-left:20px;">
+			<div class="tm">
+				韶关市黄浦镇荷花村荷花小学义教
+			</div>
+<img class='lazyload' data-original="http://cdn043.yun-img.com/static/upload/a00697t/visualtoolkit/20180119170722_27515.jpg" alt="" /> 
+		</li>
+</a> <a href="#"> 
+		<li style="margin-left:20px;">
+			<div class="tm">
+				韶关市黄浦镇荷花村荷花小学义教
+			</div>
+<img class='lazyload' data-original="http://cdn065.yun-img.com/static/upload/a00697t/visualtoolkit/20180119170742_55079.jpg" alt="" /> 
+		</li>
+</a> 
+	</ul>
+</div></div>
+	</div>
+</div>
+<!-- 模块 end  duangou-->
+<!-- 站点公告中心模块 #义卖扶贫-->
+<div class="m-wg m-default m-default-default" id="visualmodule_31" style='width:1153px;height:35px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:20px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+			<div class="m-wg-ct">
+		<div class='m-theme28'><div style="float:left;">
+	<p style="font-size:20px;font-weight:bold;">
+		义卖扶贫&nbsp;&nbsp;<span style="font-size:12px;font-weight:100;">我们为你精选，让每一次的买卖都有价值</span> 
+	</p>
+</div>
+<a href="#"> 
+<div style="float:right;color:#4ab344;">
+	<p style="font-size:12px;font-weight:bold;">
+		查看更多 》
+	</p>
+</div>
+</a></div>
+	</div>
+</div>
+<!-- 模块 end  duangou-->
+<div class="m-wg m-default m-default-default" id="visualmodule_32" style='width:1154px;height:416px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:0px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+			<div class="m-wg-ct">
+		<!-- 图片简介栏目 -->
+		<div class="m-theme257">
+									<div class="m-theme257-al" data-scroll-reveal="enter bottom over 1s">		
+				<div class="m-theme257-img">
+					<a href="/newsdetail_815455.html" target="_blank">
+						<img class='lazyload' data-original="http://cdn033.yun-img.com/static/upload/a00632t/news/20161202112934_22441.png" alt="山区孩子拍摄的精美明信片）">
+					</a>
+				</div>
+				<div class="m-theme257-content">
+					<div class="m-theme257-title">
+						<a href="/newsdetail_815455.html" target="_blank">山区孩子拍摄的精美明信片</a>
+					</div>
+					<div class="m-theme257-txt">
+					<a >
+						价格：9.9元
+					</a>
+					</div>
+					<div class="m-theme257-time">拍摄日期：2016-12-01</div>
+				</div>
+			</div>
+									<div class="m-theme257-al" data-scroll-reveal="enter bottom over 1s">		
+				<div class="m-theme257-img">
+					<a href="/newsdetail_815454.html" target="_blank">
+						<img class='lazyload' data-original="http://cdn033.yun-img.com/static/upload/a00632t/news/20161202112758_59859.png" alt="山区孩子拍摄的精美明信片">
+					</a>
+				</div>
+				<div class="m-theme257-content">
+					<div class="m-theme257-title">
+						<a href="/newsdetail_815454.html" target="_blank">山区孩子拍摄的精美明信片</a>
+					</div>
+					<div class="m-theme257-txt">
+					<a href="/newsdetail_815454.html" target="_blank">
+					价格：10元
+					</a>
+					</div>
+					<div class="m-theme257-time">拍摄日期：2016-12-02</div>
+				</div>
+			</div>
+									<div class="m-theme257-al" data-scroll-reveal="enter bottom over 1s">		
+				<div class="m-theme257-img">
+					<a href="/newsdetail_815453.html" target="_blank">
+						<img class='lazyload' data-original="http://cdn033.yun-img.com/static/upload/a00632t/news/20161202112401_39390.png" alt="山区孩子拍摄的精美明信片">
+					</a>
+				</div>
+				<div class="m-theme257-content">
+					<div class="m-theme257-title">
+						<a href="/newsdetail_815453.html" target="_blank">山区孩子拍摄的精美明信片</a>
+					</div>
+					<div class="m-theme257-txt">
+					<a href="/newsdetail_815453.html" target="_blank">
+						价格：11元
+					</a>
+					</div>
+					<div class="m-theme257-time">拍摄日期：2016-12-02</div>
+				</div>
+			</div>
+									<div class="m-theme257-al" data-scroll-reveal="enter bottom over 1s">		
+				<div class="m-theme257-img">
+					<a href="/newsdetail_815452.html" target="_blank">
+						<img class='lazyload' data-original="http://cdn033.yun-img.com/static/upload/a00632t/news/20161202111917_57006.png" alt="山区孩子拍摄的精美明信片">
+					</a>
+				</div>
+				<div class="m-theme257-content">
+					<div class="m-theme257-title">
+						<a href="/newsdetail_815452.html" target="_blank">山区孩子拍摄的精美明信片</a>
+					</div>
+					<div class="m-theme257-txt">
+					<a href="/newsdetail_815452.html" target="_blank">
+				    价格：200元
+					</a>
+					</div>
+					<div class="m-theme257-time">拍摄日期：2016-12-02</div>
+				</div>
+			</div>
+									<div class="m-theme257-al" data-scroll-reveal="enter bottom over 1s">		
+				<div class="m-theme257-img">
+					<a href="/newsdetail_815451.html" target="_blank">
+						<img class='lazyload' data-original="http://cdn033.yun-img.com/static/upload/a00632t/news/20161202111506_83320.png" alt="儿童手表">
+					</a>
+				</div>
+				<div class="m-theme257-content">
+					<div class="m-theme257-title">
+						<a href="/newsdetail_815451.html" target="_blank">儿童手表</a>
+					</div>
+					<div class="m-theme257-txt">
+					<a href="/newsdetail_815451.html" target="_blank">
+					价格：50元
+					</a>
+					</div>
+					<div class="m-theme257-time">出售日期：2016-12-01</div>
+				</div>
+			</div>
+									<div class="m-theme257-al" data-scroll-reveal="enter bottom over 1s">		
+				<div class="m-theme257-img">
+					<a href="/newsdetail_815450.html" target="_blank">
+						<img class='lazyload' data-original="http://cdn033.yun-img.com/static/upload/a00632t/news/20161202111134_68969.jpg" alt="哈哈哈哈哈哈哈哈哈哈">
+					</a>
+				</div>
+				<div class="m-theme257-content">
+					<div class="m-theme257-title">
+						<a href="/newsdetail_815450.html" target="_blank">哈哈哈哈哈哈哈哈</a>
+					</div>
+					<div class="m-theme257-txt">
+					<a href="/newsdetail_815450.html" target="_blank">
+					价格：无价
+					</a>
+					</div>
+					<div class="m-theme257-time">出售日期：2016-12-02</div>
+				</div>
+			</div>
+			
+			<div class="clearing">&nbsp;</div>
+		</div>
+		<!-- 图片简介栏目 end -->
+	</div>
+</div><!-- 站点公告中心模块 #马上贡献-->
+<div class="m-wg m-default m-default-default" id="visualmodule_33" style='width:1155px;height:200px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:20px;margin-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+		<style type='text/css' class='m-wg-ct-style'>#visualmodule_33 .m-wg-ct{font-family:inherit;background-color:#26be60;}</style>	<div class="m-wg-ct">
+		<div class='m-theme28'><style>
+#visualmodule_33 .m-wg-ct{
+                position: absolute;
+                width: 100%;
+                left: 0;
+                height: inherit;
+                overflow: hidden;
+               z-index: -100;
+               background-position:center 0;
+            }
+</style></div>
+	</div>
+</div>
+<!-- 模块 end  duangou-->
+<!-- 站点公告中心模块 -->
+<div class="m-wg m-default m-default-default" id="visualmodule_34" style='width:1150px;height:144px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:-170px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
+		<style type='text/css' class='m-wg-ct-style'>#visualmodule_34 .m-wg-ct{font-family:inherit;background-color:transparent;}</style>	<div class="m-wg-ct">
+		<div class='m-theme28'><table style="width:100%;" cellpadding="2" cellspacing="0" border="0" bordercolor="#000000" class="ke-zeroborder">
+	<tbody>
+		<tr>
+			<td style="width:20%;">
+				<img class='contribute' src="{% static "picture/logo .jpg" %}" data-original="" alt="11" /><br />
+			</td>
+			<td style="width:60%;">
+				<p style="font-size:30px;color:#fff;line-height:40px;font-weight:bold;">
+					热爱志愿的你，快快赞助我们，我们将于扶贫建设，全面建设小康社会
+				</p>
+<span style="font-size:12px;color:#fff;line-height:40px;">你的点滴奉献，终会汇聚成河，引领新时代，新中国共同富裕</span> 
+			</td>
+			<td style="width:20%;">
+				<a href="message.html">
+				<div style="background:#ff9a00;height:40px;width:150px;border-radius:20px;text-align:center;line-height:40px;color:#fff;margin:0 auto;">
+					马上贡献
+				</div>
+</a> 
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br /></div>
+	</div>
+</div>
+<!-- 模块 end  duangou-->
+<div class='g-main-clear' style='clear:both'></div>
+</div>
+<!-- 拖拽980 -->
+<!-- 脚部 -->
+<footer class="g-ft g-ft-edit">
+	<!-- 脚部980 -->
+	<div class="">
+		<!-- 脚部自定义模块 -->
+				<div class="m-ft-foothtml" >
+			<div id="set_foothtml"><style>
+.m-newnav ul .first-li {padding: 0 25px;}
+.m-newnav ul li .first-a {font-size: 15px;}
+.g-ft, .g-ft a, .ft ahover {
+    color: #fff;
+}
+</style>
+<p style="text-align:center;">
+	<img src="{% static "picture/logo .jpg"%}" width="100" height="87" alt="1" />
+</p>
+<p style="text-align:center;">
+	<br />
+</p>
+<table style="width:100%;text-align:left;font-size:16px;line-height:25px;" cellpadding="2" cellspacing="0" border="0" bordercolor="#000000" class="ke-zeroborder">
+	<tbody>
+		<tr>
+			<td style="width:8%;">
+				<img src="{% static "picture/20180123115437_21080.png"%}" width="40" height="40" alt="" /><br />
+			</td>
+			<td style="width:20%;">
+				<p>
+					机构电话：
+				</p>
+				0769-22861378
+			</td>
+			<td style="width:8%;">
+				<img src="{% static "picture/20180123115807_91634.png"%}" width="50" height="34" alt="" /><br />
+			</td>
+			<td style="width:21%;">
+				<p>
+					机构邮箱：
+				</p>
+helloguobao@gmail.com
+			</td>
+			<td style="width:8%;">
+				<img src="{% static "picture/20180123115818_43084.png"%}" width="46" height="44" alt="" /><br />
+			</td>
+			<td style="width:35%;">
+				<p>
+					机构地址：
+				</p>
+  				东莞理工学院23栋
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br /></div>
+		</div>
+				<!-- 脚部自定义模块 end -->
+		<!-- 脚部菜单 -->
+				<!-- 脚部菜单 end -->
+		<!-- 脚部信息 -->
+		<div class="m-ft-text">
+						<span id="set_copyright" >copyright ©2018</span>
+									<!--<span id="set_beian" ><a target="_blank" href="http://www.miitbeian.gov.cn/"> </a>&nbsp;&nbsp;&nbsp;</span>-->
+			<span id="set_manage" ><a href="/admin">后台管理</a></span>
+					</div>
+		<!-- 脚部信息 end -->
+	</div>
+	<!-- 脚部980 end -->
+</footer>
+<!-- 脚部 end -->
+</div>
+<!-- 拖拽JS -->
+<!-- 脚部功能插件 -->
+<!-- 底部插件注入区 -->
+<center></center>
+
+<bgsound src="" loop="-1">
+<style type='text/css'>
+.m-demo-sitetips {line-height: 30px;font-size: 14px;color: #000;text-align: center;position: fixed;left: 0;top: 0;z-index: 10000;width: 100%;height: 48px;border-bottom: 0;border-bottom: 1px solid #d8d8d8 \9;margin: 0;padding: 0;background: #fff;-webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.2);-moz-box-shadow: 0 2px 5px rgba(0,0,0,0.2);box-shadow: 0 2px 5px rgba(0,0,0,0.2);}
+.m-demo-sitetips .m-demo-keepcenter {max-width: 960px;min-width: 700px;_width: 860px;height: 48px;line-height: 48px;margin: 0 auto;position: relative;}
+.m-demo-sitetips .m-demo-tiptext {float: left;padding-left: 20px;}
+.m-demo-sitetips .m-demo-tiptext span {color: #666;_float:left;}
+.m-demo-red{color:red;}
+</style>
+<!--<div class='m-demo-sitetips'></div>-->
+<script type='text/javascript'>
+$(document).ready(function(){
+	$("<div style='height:48px;'></div>").prependTo("body");
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>暖风公益机构</title>
+<meta charset="utf-8" />
+<meta name="Description" content="暖风公益" />
+<meta name="robots" content="all" />
+<meta http-equiv="cleartype" content="on" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Access-Control-Allow-Origin" content="*" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" href="{% static "register/css/normalize.css" %}" />
+<link rel="stylesheet" href="{% static "register/css/bootstrap.min.css" %}" />
+<link rel="stylesheet" href="{% static "register/css/font-awesome.min.css" %}" />
+<link rel="stylesheet" href="{% static "register/css/awesome-bootstrap-checkbox.css" %}" />
+<link rel="stylesheet" href="{% static "register/css/adminlte.css" %}" />
+<link rel="stylesheet" href="{% static "register/css/skin-black-light.min.css" %}" />
+<link rel="stylesheet" href="{% static "register/css/zaf.css" %}" />
+<!--[if lt IE 9]>
+<script src="{% static "register/js/html5shiv.min.js" %}"></script>
+<script src="{% static "register/js/respond.min.js" %}"></script>
+<![endif]-->
+<script src="{% static "register/js/ie8.js" %}"></script>
+<script src="{% static "register/js/jquery-1.12.4.min.js" %}"></script>
+<script src="{% static "register/js/jquery-form-3.51.min.js" %}"></script>
+<script src="{% static "register/js/js.cookie-2.1.4.js" %}"></script>
+<script src="{% static "register/js/bootstrap.min.js" %}"></script>
+<script src="{% static "register/js/url-2.3.1.min.js" %}"></script>
+<script src="{% static "register/js/jquery-dateformat-1.0.2.min.js" %}"></script>
+<script src="{% static "register/js/zafutil-1.0.5.js" %}"></script>
+<script src="{% static "register/js/vmsutil.js" %}"></script>
+<script src="{% static "register/js/zafpaging.js" %}"></script>
+<script src="{% static "register/js/jquery-bootmodal-1.0.2.js" %}"></script>
+<script src="{% static "register/js/jquery-bootpage-1.0.5.js" %}"></script>
+<script src="{% static "register/js/jquery-bootselect-1.0.0.js" %}"></script>
+<script src="{% static "register/js/jquery-bootbutton-1.0.0.js" %}"></script>
+<script src="{% static "register/js/app.min.js" %}"></script>
+<script src="{% static "register/js/jquery.slimscroll.min.js" %}"></script>
+<script src="{% static "register/js/crossdomain.js" %}"></script>
+
+<script>
+$(function() {
+  if ($.validator) {
+    $.validator.setDefaults({
+      onfocusout: false,
+      onkeyup: false,
+      onclick: false
+    });
+  }
+  if (ZafUtil.obj() > 0) {
+    $("#LI_SzygLogo").hide();
+    $("#SPAN_Unread").show();
+    setInterval(function() {
+      $("#SPAN_Unread").fadeOut(200).fadeIn(200);
+    }, 1000);
+  }
+});
+</script>
+<style>
+</style>
+</head>
+<body class='hold-transition skin-black-light sidebar-collapse layout-boxed'>
+<div class="wrapper">
+  <!-- Main Header -->
+  <header class="main-header">
+    <a href="javascript:history.back();" class="logo">
+      <span class="logo-mini"><i class="fa fa-arrow-left"></i></span>
+      <span class="logo-lg"><i class="fa fa-arrow-left"></i></span>
+    </a>
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"></a>
+			<div class="navbar-custom-menu">
+				<ul class="nav navbar-nav">
+          <li id="LI_SzygLogo" class="dropdown messages-menu"><a href="#"><img src="{% static "register/picture/logo.jpg" %}" style="height:20px;border:0" /></a></li>
+  				<li class="dropdown messages-menu"><a href='/default.aspx?_c=Message'><span id="SPAN_Unread" class="text-red x-bold" style="display:none">您有未读消息&nbsp;</span><i class="fa fa-envelope-o"></i><span class="label label-danger"></span></a></li>
+          <!--<li class="dropdown messages-menu"><a href='https://www.izyz.org.cn/account/personalCenter.html?appId=0102'><i class="fa fa-user-circle"></i><span class="label label-info">通</span></a></li>-->
+        </ul>
+			</div>
+    </nav>
+  </header>
+<aside class="main-sidebar">
+  <section class="sidebar">
+    <ul class="sidebar-menu">
+      <li class="header">网站链接</li>
+      <li><a href="/index"><i class="fa fa-square"></i><span>返回首页</span></a></li>
+      <li class="header">志愿项目</li>
+      <li><a href="/active?a=001"><i class="fa fa-square"></i><span>最新活动</span></a></li>
+     
+      <li class="header">个人中心</li>
+      <li><a href="/index><i class="fa fa-square"></i><span>义工登录</span></a></li>
+      <li class="header">管理入口</li>
+      <li><a href="#"><i class="fa fa-square"></i><span>我的发布</span></a></li>
+      <li><a href="/admin"><i class="fa fa-square"></i><span>管理登录</span></a></li>
+    </ul>
+  </section>
+</aside>
+
+  <div class="content-wrapper">
+    <div>
+      <section class="content-header hidden-xs">
+        <div>
+          <ol class="breadcrumb">
+            <li class="x-hspacing-sm"><i class="fa fa-map-marker text-red"></i><a href='/index'><b>返回首页</b></a></li>
+            <li><a href="javascript:history.back();"><b>返回上页</b></a></li>
+            <li class="active"><b id="B_NavTitle">义工注册</b></li>
+          </ol>
+        </div>
+      </section>
+      <section class="content"><style>
+.x-txt-small {
+	width: 70px !important;
+}
+.x-profile-label {
+	width: 85px;
+}
+.x-eula {
+	overflow-y: scroll;
+	font-size: 12px;
+	line-height: 1.6;
+}
+@media (min-width: 768px) {
+	.x-eula {
+		height: 300px;
+	}
+}
+@media (max-width: 767px) {
+	.x-eula {
+		height: 180px;
+	}
+}
+</style>
+<link rel="stylesheet" href="{% static "register/css/cropper.min.css" %}" />
+<script src="{% static "register/js/cropper.min.js" %}"></script>
+<script src="{% static "register/js/jquery-hz2py.min.js" %}"></script>
+<script src="{% static "register/js/jquery.inputmask.bundle.min.js" %}"></script>
+<script src="{% static "register/js/jquery.validate.min.usr.js" %}"></script>
+<script src="{% static "register/js/vms-validate.js" %}"></script>
+<script src="{% static "register/js/zaf-bootstrap-treeview.min.js" %}"></script>
+<script src="{% static "register/js/grouptree-1.0.2.js" %}"></script>
+<div class="nav-tabs-custom">
+	<ul id="UL_Tabs" class="nav nav-tabs">
+		<li class="active"><a id="A_TabEULA" href="#DIV_TabEULA" data-toggle="tab" class="x-hspacing-sm"><i class="fa fa-eye text-primary"></i><b>阅读协议</b></a></li>
+    <li id="LI_TabProfile" style="display:none"><a id="A_TabProfileAnchor" href="#DIV_TabProfile" data-toggle="tab" class="x-hspacing-sm"><i class="fa fa-user text-primary"></i><b>基本信息</b></a></li>
+<!--    <li id="LI_TabPhoto" style="display:none"><a id="A_TabPhotoAnchor" href="#DIV_TabPhoto" data-toggle="tab" class="x-hspacing-sm"><i class="fa fa-image text-primary"></i><b>头像照片</b></a></li>-->
+    <li id="LI_TabSuccess" style="display:none"><a id="A_TabSuccessAnchor" href="#DIV_TabSuccess" data-toggle="tab" class="x-hspacing-sm"><i class="fa fa-image text-primary"></i><b>注册成功</b></a></li>
+  </ul>
+	<div class="tab-content">
+		<!-- tab eula -->
+		<div class="tab-pane active" id="DIV_TabEULA">
+			<div class="box box-solid">
+	      <div class="box-header with-border"><h3 class="box-title">暖风注册须知</h3></div>
+	      <div class="box-body x-eula">为深入贯彻落实深圳市委市政府建设“志愿者之城”的战略规划，推广志愿服务理念，
+	      	提高志愿服务水平，深圳市义工联联合有关单位以志愿服务信息管理平台为载体，为志愿者（义工）及志愿服务组织
+	      	等用户提供基于互联网以及移动网的信息化服务。为明确双方的权利和义务，规范双方业务行为，志愿服务信息管理
+	      	平台注册用户（以下简称用户）与深圳市义工联合会（以下简称市义工联）本着平等互利的原则，就网上办理业务相
+	      	关事宜达成如下协议：<br /><br />第一条 网上办理业务的前提<br />用户必须完全同意本协议条款及相关网上办
+	      	理业务的服务条款，才可以办理本网站的各类业务。本网站所提供的服务应按照服务条款和操作规则严格执行。用户进
+	      	入注册程序并点击“同意”按钮，即表示用户已与市义工联达成本协议，用户同意并自愿接受本协议的全部条款和条件。
+	      	<br /><br />第二条 用户的账号、密码和安全<br />网站用户账号和密码是用户重要的个人资料，用户务必注意账号
+	      	和密码的保密；用户应按照机密的原则设置和保管自设密码，避免使用与本人明显相关的信息作为密码，不应将本人自
+	      	设密码提供给法律规定必须提供之外的任何人；用户应采取合理措施，防止本人密码被窃取，由于密码泄露造成的后果
+	      	由用户自行承担。凡使用网站账号和密码办理的一切业务，均视为用户亲自办理的业务，由用户承担由此所导致的相关
+	      	后果和责任，包括但不限于业务费用的支付等。本网站有相应的安全措施来保障用户的信息安全，但市义工联不保证本
+	      	网站绝对安全。<br /><br />第三条 双方的权利义务<br />1. 用户申请业务之前应先了解服务及详细使用情况，使
+	      	用过程中如有疑问，可浏览本网站的相关栏目或拨打市义工联服务热线12355等联系电话进行查询。<br />2. 用户必须
+	      	提供准确的资料，市义工联将根据用户提供的资料进行核对，如有不符，本网站将不予受理用户的业务办理。<br />3.
+	      	 用户通过本信息管理平台发送短信，必须遵守以下规定：<br />（1）遵守国家的有关规定和行政规章制度；<br />
+	      	 （2）不发送任何非法的、骚扰性、中伤他人的、辱骂性的、恐吓性的、伤害性的、挑衅的、庸俗的、淫秽等内容的短讯消息；<br />（3）不发送任何教唆他人实施犯罪行为的短讯消息；<br />（4）不发送涉及国家安全、国家机密的短讯消息；<br />（5）不向不认识的手机用户随意发送任何短讯消息。<br />如用户违反以上规定，市义工联有权配合公安部门追查信息来源，依法追究用户的相关法律责任。<br />4. 用户应按规定准确填写相关的申请信息，用户填写完毕后按提交键确认，即视为用户对所提交资料内容真实性、准确性、合法性的承诺。<br />5. 市义工联有权根据经依法核准或备案的资费标准，向用户收取相关费用。<br />6. 为了让用户及时了解市义工联的服务信息，市义工联可以通过短信、邮件、媒体广告等方式向用户告知或推荐使用。<br /><br />第四条 免责声明<br />本网站仅以现有的、按其现状提供有关的信息、材料及运行。市义工联不对有关本网站或其所提供的材料和信息的可用性、准确性或可靠性做出任何种类的保证，包括但不限于对产权，风险，不侵权，准确性，可靠性，适销性，使用正确性，适合特定用途或其它适当性。市义工联不保证本网站的服务一定能满足用户的要求，不保证服务不会中断，不保证服务的绝对及时、安全、真实和无差错，也不保证用户发送的信息能完全准确、及时、顺利地被传送。不论何种情形市义工联都不对任何由于使用或无法使用本网站提供的服务所造成间接的、附带的、特殊的或余波所及的损失、损害、债务或商务中断承担任何责任。<br /><br />第五条 法律适用及协议解释<br />本协议的成立、生效、履行和解释，均适用中华人民共和国法律；在法律允许范围内，本协议由深圳市义工联合会负责解释。<br /><br />第六条 争议的解决<br />用户和市义工联在履行本协议的过程中，如发生争议，应友好协商解决。协商不成的，任何一方均可向深圳仲裁委员会申请仲裁。<br /><br />第七条 协议生效和效力<br />本协议自用户点击“同意”按钮时生效。本协议的任何条款如因任何原因而被确认无效，都不影响本协议其他条款的效力。<br /><br />第八条 其他规定<br />本协议用户必须严格遵守《深圳市义工服务条例》等法律法规，并遵守市义工联及本人注册所属的区义工联（或其它志愿服务组织）制定的相关章程及规定。<br /></div>
+	    </div>
+	    <hr />
+	    <div class="text-center">
+		    <button onclick="beginRegister();" class="btn btn-primary" style="width:100px">我同意</button>
+		    <button onclick="location.href='/index';" class="btn" style="width:100px">我拒绝</button>
+	    </div>
+		</div><!-- /tab eula -->
+		<!-- tab profile -->
+		<div class="tab-pane" id="DIV_TabProfile">
+			<form id="FORM_Profile" class="form" role="form" action='/register?_c=Register&_a=SaveProfile' method="POST">
+				<input type="hidden" name="LastAction" />
+				<input type="hidden" name="ProfileSubmitToken" value='845e92d8-3a20-4347-a75d-c535fb3e233d-1518769116014' />
+				<!-- editable profile -->
+				<table class="x-profile-section">
+					<tr>
+<!--
+						<td style="width:1%">
+							<div onclick="$('#A_TabPhotoAnchor').tab('show')" class="x-hand cropper-preview x-hidden" style="overflow:hidden;background-color:#fcfcfc;width:100px;height:140px"></div>
+							<img onclick="$('#A_TabPhotoAnchor').tab('show')" class="x-hand" id="IMG_VolunteerPhoto" src="picture/portrait-upload.png" style="width:100px;height:140px" />
+							<input type="hidden" name="PhotoTempFile" />
+						</td>
+-->
+						<td style="vertical-align:bottom;padding-left:15px">
+							<table class="x-table">
+								<tr><td class="x-profile-label x-fix x-must-fill" style="width:1%;height:35px">姓名</td><td class="x-profile-data x-hspacing-md"><input type="text" name="LastName" placeholder="姓" class="x-txt-small" /><input type="text" name="FirstName" placeholder="名" class="x-txt-small" /></td></tr>
+								
+								<tr><td class="x-profile-label x-fix x-must-fill" style="width:1%;height:35px">性别</td><td class="x-profile-data"><select id="Gender" name="Gender"class="x-boot-select x-boot-select-xs"><option value="1">男</option><option value="2">女</option></select></td></tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<hr />
+				<div class="x-profile-section">
+					<div class="x-row">
+						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+							<table class="x-table"><tr><td class="x-profile-label x-must-fill">设置密码</td><td class="x-profile-data"><input type="password" name="Kpwd" /></td></tr></table>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+							<table class="x-table"><tr><td class="x-profile-label x-must-fill">确认密码</td><td class="x-profile-data"><input type="password" name="Kcpwd" /></td></tr></table>
+						</div>
+					</div>
+				</div>
+				<hr />
+			
+				<div class="clearfix"></div>
+				<hr />
+				<div class="x-profile-section">
+					<div class="x-row">
+						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+							<table class="x-table"><tr><td class="x-profile-label x-must-fill">证件类型</td><td class="x-profile-data"><select id="IDType" name="IDType"class="x-boot-select x-boot-select-xs"><option value="1">身份证</option><option value="2">回乡证（香港居民）</option><option value="3">回乡证（澳门居民）</option><option value="4">台胞证（台湾居民）</option><option value="5">护照（外籍人士）</option><option value="6">军官证（现役军人）</option><option value="7">士兵证（现役军人）</option><option value="9">其他有效国籍旅行证件</option></select></td></tr></table>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+							<table class="x-table"><tr><td class="x-profile-label x-must-fill">证件号</td><td class="x-profile-data"><input type="text" id="IDNumber" name="IDNumber" /></td></tr></table>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+							<table class="x-table"><tr><td class="x-profile-label x-must-fill">出生日期</td><td class="x-profile-data"><input type="text" id="Birthdate" name="Birthdate" class="x-pick-date x-mask-date" data-field="date" /></td></tr></table>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+							<table class="x-table"><tr><td class="x-profile-label x-must-fill">手机号</td><td class="x-profile-data"><input type="text" name="VolunteerMobile" /></td></tr></table>
+						</div>
+					</div>
+					<div class="x-row">
+						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+							<table class="x-table"><tr><td class="x-profile-label">EMAIL</td><td class="x-profile-data"><input type="text" name="Email" /></td></tr></table>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+							<table class="x-table"><tr><td class="x-profile-label x-must-fill-alt">紧急联系人</td><td class="x-profile-data"><input type="text" name="ContactPerson" /></td></tr></table>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+							<table class="x-table"><tr><td class="x-profile-label x-must-fill-alt">联系人手机</td><td class="x-profile-data"><input type="text" name="ContactPersonMobile" /></td></tr></table>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+							<table class="x-table"><tr><td class="x-profile-label">政治面貌</td><td class="x-profile-data"><select id="PoliticalStatusID" name="PoliticalStatusID"class="x-boot-select x-boot-select-xs"><option value="1">中共党员</option><option value="3">中共预备党员</option><option value="13">共青团员</option><option value="14">民主党派</option><option value="15">无党派民主人士</option><option value="16">群众</option></select></td></tr></table>
+						</div>
+					</div>
+					
+					<div class="x-row">
+					
+					
+						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+							<table class="x-table"><tr><td class="x-profile-label">专业</td><td class="x-profile-data"><input type="text" name="Major" /></td></tr></table>
+						</div>
+					
+					</div>
+				</div>
+				<hr />
+				<div class="x-profile-section">
+					<table class="x-table">
+						
+						<tr>
+							<td class="x-profile-label x-must-fill-alt">家庭地址</td>
+						
+							<td class="x-profile-data"><input type="text" name="FamilyAddress" placeholder="省，市，镇，村" /></td>
+						</tr>
+						<tr>
+							<td></td><td colspan=2 class="x-text-sm x-color-tooltip"><i class="fa fa-asterisk"></i> 地址用于快递义工服、证书等用途，请正确输入</td>
+						</tr>
+					</table>
+				</div>
+				<hr />
+				<div class="x-profile-section">
+					<table class="x-table">
+						<tr>
+							<td class="x-profile-label">简介</td>
+							<td class="x-profile-data"><textarea class="form-control x-intro" name="VolunteerIntro" rows=6></textarea></td>
+						</tr>
+					</table>
+				</div>
+				<hr />
+				<div class="x-profile-section text-right">
+					<div class="x-row">
+						<div class="col-xs-12"><button id="BTN_Register" class="btn btn-primary form-control" type="submit">注册</button></div>
+						
+						
+					</div>
+				</div>
+			</form>
+		</div><!-- /tab profile -->
+	
+		<!-- tab success -->
+		<div class="tab-pane" id="DIV_TabSuccess">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="callout callout-info"><p>申请已提交，请等待审核并阅读以下提示</p></div>
+		    	<ul>
+		    		<li>重要！您的注册号为 <b class="x-color-danger" id="B_AccountName"></b></li>
+		    		<li>您可使用注册号，或注册时填写的身份证号为帐号名进行登录</li>
+		    		<li>根据申请组织不同，正式义工审核将须 1 至 7 个工作日，请关注下图 [志愿深圳] 二维码查询审核情况</li>
+		    	</ul>
+		    	<hr />
+		    	<div class="text-center" style="margin:40px 10px"><img src="{% static "register/picture/scanqr.png" %}" style="width:100%;max-width:800px" /></div>
+		    	<div class="x-vspacing-md">
+					  <button onclick="location.href='Default.aspx'" class="btn btn-primary form-control">返回首页</button>
+					  <button onclick="location.href='Default.aspx?_c=ProgramSearch';" class="btn btn-primary form-control">浏览项目</button>
+						<button id="BTN_NextStep" class="btn btn-default form-control x-hidden">继续，同时注册广东共青团一号通</button>
+				  </div>
+		    </div>
+	    </div>
+		</div><!-- /tab success -->
+	</div><!-- /tab-content -->
+</div>
+<link rel="stylesheet" href="{% static "register/css/datetimepicker.min.css" %}" />
+<script type="text/javascript" src="{% static "register/js/datetimepicker.min.js" %}"></script>
+<script type="text/javascript" src="{% static "register/js/datetimepicker-i18n-zh-cn.js" %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static "register/css/datetimepicker-ltie9.min.css" %}" />
+<script type="text/javascript" src="{% static "register/js/datetimepicker-ltie9.min.js" %}"></script>
+<![endif]-->
+<div id="DIV_DateTimePicker"></div>
+<script>
+$(function() {
+	var toggleDateTimePickerPopup = getDateTimePickerPopupState();
+	$("#DIV_DateTimePicker").DateTimePicker({
+		language: "zh-CN",
+		datetimeformat: "yyyy-MM-dd hh:mm",
+		dateformat: "yyyy-MM-dd",
+		timeformat: "hh:mm",
+		readonlyInputs: false,
+		animationDuration: 0,
+		isPopup: true, // toggleDateTimePickerPopup,
+  	addEventHandlers: function() {
+  		return;
+  		var dtPickerObj = this;
+			if (!toggleDateTimePickerPopup) {
+      	$(window).resize(function() {
+      		toggleDateTimePickerPopup = getDateTimePickerPopupState();
+      		dtPickerObj.setIsPopup(toggleDateTimePickerPopup);
+      	});
+			}
+  	}
+	});
+});
+
+function getDateTimePickerPopupState() {
+	if ($(document).width() >= 768) {
+		return false;
+	}
+	return true;
+}
+</script>
+
+<script>
+
+
+
+function handleTabs() {
+	$('#UL_Tabs a').click(function(e) {
+		e.preventDefault();
+		$(this).tab('show');
+	});
+	
+}
+
+function initFormWidgets() {
+	
+}
+
+function bindEvents() {
+	// bind pinyin plugin
+	
+}
+
+
+function profileSubmitValidate() {
+	
+}
+
+function uploadCanvasPhoto() {
+	
+}
+
+function beginRegister() {
+	$("#A_TabProfileAnchor").tab("show");
+}
+
+function completeRegister() {
+
+}
+
+function bindOrCreateGdylPass(volunteerID) {
+	
+}
+</script>
+</section>
+    </div>
+  </div>
+  <footer class="main-footer">
+    <b class="x-text-sm">© 暖风公益</b>
+  </footer>
+</div>
+</body>
+</html>

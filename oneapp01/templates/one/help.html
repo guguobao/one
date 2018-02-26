@@ -1,0 +1,298 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>暖风网站帮助文档</title>
+</head>
+<style type="text/css">
+		*{
+		margin: 0px;
+		padding: 0px;
+	}	
+	body {
+    color: #333;
+    background: #ededed;
+/*    font-family: "Microsoft Yahei";*/
+	}
+	.header{
+		width: 1350px;
+		height: 120px;
+		background-color: aqua;
+		margin: 0 auto;
+			
+	}
+	.header .headerimg{
+		width: 100px;
+		height: auto;
+		margin-left: 300px;
+		margin-top: 45px;
+		position: absolute;
+	}
+	.header .title{
+		background-color: aliceblue;
+		width: 660px;
+		height: 60px;
+		margin-left: 500px;
+		margin-top: 60px;
+		padding-left: 50px;
+		position: absolute;
+	}
+	.header .titleul{
+		text-decoration: none;
+		list-style: none;
+		position: relative
+	}
+	.header .titleul li{
+		float: left;
+		height: 68px !important;
+		width: 108px;
+		position: relative
+	}
+	.header .titleul li a{
+	line-height: 71px;
+	text-align: center;
+	color: #000000;
+	font-size: 15px;
+	text-decoration: none;
+	}
+	.header .titleul li a:hover{
+		color: green;
+	}
+	.content{
+		width: 1200px;
+		
+		margin: 0 auto;
+		
+		
+	}
+	.helparticle{
+		width: 1100px;
+		margin: 0 auto;
+		margin-left: 50px;
+		position: absolute;
+	}
+	.helparticle .article01{
+		width: 900px;
+		height: 160px;
+		background-color:#FFF;
+		margin: 0 auto;
+		margin-top:100px; 
+		position: relative;
+	}
+	.article02{
+		float: right;
+		width: 650px;
+		height: 120px;
+		margin-top: 20px;
+		margin-right: 20px;
+	}
+	.article01 img{
+		float: left;
+		width: 220px;
+		height: 150px;
+	}
+	.content .article02 .text{
+		line-height: 30px;
+		width: 400px;
+		padding-left: 15px;
+	}
+	.content .article02 a{
+		float: right;
+		margin-top: 30px;
+		text-decoration: none;
+		text-color: #000000;
+	}
+	.content .article02 a:hover{
+		color: green;
+		
+	}
+	.article01-one{
+		width: 900px;
+		height: 500px;
+		background-color:#FFF;
+		margin: 0 auto;
+		margin-top: 10px;
+		display: none;
+	}
+	.article01-one h3{
+		text-align: center;
+		line-height: 50px;
+	}
+</style>
+	<script type="text/javascript">
+		//第一个展开
+		function openarticle1(){
+		var article=document.getElementById("openarticle1");
+		article.style.display="block";
+		}
+		function closearticle1(){
+		var article=document.getElementById("openarticle1");
+		article.style.display="none";
+		}
+		//第2个展开
+		function openarticle2(){
+		var article=document.getElementById("openarticle2");
+		article.style.display="block";
+		}
+		function closearticle2(){
+		var article=document.getElementById("openarticle2");
+		article.style.display="none";
+		}
+		//第3个展开
+		function openarticle3(){
+		var article=document.getElementById("openarticle3");
+		article.style.display="block";
+		}
+		function closearticle3(){
+		var article=document.getElementById("openarticle3");
+		article.style.display="none";
+		}
+		//第4个展开
+		function openarticle4(){
+		var article=document.getElementById("openarticle4");
+		article.style.display="block";
+		}
+		function closearticle4(){
+		var article=document.getElementById("openarticle4");
+		article.style.display="none";
+		}
+		
+	</script>
+<body>
+	
+<div class="header">
+		
+	<img class="headerimg" alt="暖风公益" src="{% static "picture/logo .jpg" %}"/>
+		<div class="title">
+			 <ul class="titleul">
+				<li>
+					<a href="/index">网站首页</a>
+				 </li>
+				<li>
+					<a href="#">暖风活动</a>
+				 </li>
+				<li>
+					<a href="#">亲子活动</a>
+				 </li>
+				 <li>
+					 <a href="#">帮扶</a>
+				 </li>
+				 <li>
+					 <a href="/help">关于我们</a>
+				 </li>
+				 <li>
+					 <a href="#">帮助</a>
+				 </li>
+			</ul>
+		</div>
+	</div>
+	<!--
+	网站帮助文案
+	-->
+	
+	<div class="content">
+		<div class="helparticle">
+			<!--
+			第一个帮助文案
+			-->
+			<div class="article01">
+				<img src="{% static "picture/logo .jpg"%}"/>
+				<div class="article02">
+					<p class="text">我们暖风机构主要的商业模式是如何帮助贫困山区的孩子脱贫，如何帮他们改善生活哟。</p>	
+					<a style="float: left" onclick="closearticle1()">《《收回</a>
+					<a onclick="openarticle1()">展开》》</a>
+				</div>
+			</div>
+			<div id="openarticle1" class="article01-one">
+					<h3>暖风公益机构</h3>
+					<div  class="littertitle" style="width: 500px;height: 40px;background-color: #;margin: 0 auto;">  
+						<a>发布时间：2017年2月16日&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发布组织：暖风公益机构</a>
+						
+					</div>
+					&nbsp;&nbsp;哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				</div>	
+			<!--
+			第2个帮助文案
+			-->
+			<div class="article01">
+				<img src="{% static "picture/logo .jpg"%}"/>
+				<div class="article02">
+					<p class="text">我们暖风机构主要的商业模式是如何帮助贫困山区的孩子脱贫，如何帮他们改善生活哟。</p>	
+					<a style="float: left" onclick="closearticle2()">《《收回</a>
+					<a onclick="openarticle2()">展开》》</a>
+				</div>
+			</div>
+			<div id="openarticle2" class="article01-one">
+					<h3>暖风公益机构</h3>
+					<div  class="littertitle" style="width: 500px;height: 40px;background-color: #;margin: 0 auto;">  
+						<a>发布时间：2017年2月16日&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发布组织：暖风公益机构</a>
+						
+					</div>
+					&nbsp;&nbsp;哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				</div>	
+			<!--
+			第3个帮助文案
+			-->
+			<div class="article01">
+				<img src="{% static "picture/logo .jpg"%}"/>
+				<div class="article02">
+					<p class="text">我们暖风机构主要的商业模式是如何帮助贫困山区的孩子脱贫，如何帮他们改善生活哟。</p>	
+					<a style="float: left" onclick="closearticle3()">《《收回</a>
+					<a onclick="openarticle3()">展开》》</a>
+				</div>
+			</div>
+			<div id="openarticle3" class="article01-one">
+					<h3>暖风公益机构</h3>
+					<div  class="littertitle" style="width: 500px;height: 40px;background-color: #;margin: 0 auto;">  
+						<a>发布时间：2017年2月16日&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发布组织：暖风公益机构</a>
+						
+					</div>
+					&nbsp;&nbsp;哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				</div>	
+			<!--
+			第4个帮助文案
+			-->
+			<div class="article01">
+				<img src="{% static "picture/logo .jpg"%}"/>
+				<div class="article02">
+					<p class="text">我们暖风机构主要的商业模式是如何帮助贫困山区的孩子脱贫，如何帮他们改善生活哟。</p>	
+					<a style="float: left" onclick="closearticle4()">《《收回</a>
+					<a onclick="openarticle4()">展开》》</a>
+				</div>
+			</div>
+			<div id="openarticle4" class="article01-one">
+					<h3>暖风公益机构</h3>
+					<div  class="littertitle" style="width: 500px;height: 40px;background-color: #;margin: 0 auto;">  
+						<a>发布时间：2017年2月16日&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发布组织：暖风公益机构</a>
+						
+					</div>
+					&nbsp;&nbsp;哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+				</div>	
+			
+		</div>
+	</div>
+	
+	
+</body>
+</html>
