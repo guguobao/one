@@ -84,14 +84,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },
-    'db1': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django',
-        'USER': 'root',
-        'PASSWORD': '138248guguobao',
-        "HOST": "118.89.16.96",
-        'PORT':'3306',
-    },
+    # 'db1': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'django',
+    #     'USER': 'root',
+    #     'PASSWORD': '138248guguobao',
+    #     "HOST": "118.89.16.96",
+    #     'PORT':'3306',
+    # },
 }
 # use multi-database in django
 # # add by WeizhongTu
@@ -108,7 +108,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'zh-Hans'
 
-TIME_ZONE = 'Asia/shanghai'
+TIME_ZONE = 'Asia/hanghai'
 
 USE_I18N = True
 

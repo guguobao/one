@@ -105,3 +105,33 @@ def adduser(request):
 #关于我们，就是帮助页面
 def helphtml(request):
     return render(request,'one/help.html')
+
+#农商
+def agribusiness(request):
+   # list={'#TopAds':'#TopAds','/TopAds':'/TopAds','#KeyWords':'#KeyWords','/KeyWords':'/KeyWords','#equal IsImportant true':'#equal IsImportant true','else':'else','/equal':'/equal'}
+    return render(request,'one/agribusiness.html')
+
+#农商2
+def agribusinesschild(request):
+   # return render(request, 'one/agribusiness001.html')
+    a = request.GET['number']
+    if request.method == 'GET':
+
+        if a == '001':
+            return render(request,'one/agribusiness001.html')
+        elif a == '002':
+            return render(request, 'one/agribusiness002.html')
+        elif a == '003':
+            return render(request, 'one/agribusiness003.html')
+        elif a == '004':
+            return  render(request,'one/agribusiness004.html')
+        elif a == '005':
+            return render(request, 'one/agribusiness005.html')
+        else:
+            return HttpResponse("404")
+
+#农商商品
+def agribusinesspay(request):
+    a = request.GET['name']
+    if request.method == 'GET':
+        return render(request,'one/agribusinesspay.html')
