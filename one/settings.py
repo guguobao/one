@@ -108,7 +108,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'zh-Hans'
 
-TIME_ZONE = 'Asia/hanghai'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -125,3 +125,8 @@ STATIC_URL = '/static/'
 
 
 STATIC_ROOT=os.path.join(BASE_DIR,'static')
+
+
+# upload folder
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')

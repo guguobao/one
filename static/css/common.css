@@ -1,0 +1,108 @@
+﻿/* 重置样式 */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{
+	margin: 0;
+	padding: 0;
+	
+}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{
+	list-style: none;
+}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+del,ins,a,a:hover{text-decoration:none;}
+
+/* 公共样式 */
+body,textarea,input,button,select,keygen,legend{font: 12px/150% Arial,Verdana,"\5b8b\4f53";color:#333;outline:0;}
+body{background:#fff;}
+a:link,a:visited{color:#333;text-decoration:none;}
+a:hover,a:active{color:#c00000;text-decoration:underline;}
+
+/* 函数样式  */
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.hidden{display:none;}
+.clearing{clear:both;width:1px;overflow:hidden;height:0;}
+
+/* 头部 */
+.g-hd-inner{margin:0 auto;/*width:980px;width:100%;*/width:1000px;  height: 107px;}
+.g-hd-edit {height:100%;}
+.g-hd-sd1{position:relative;float:left;width:190px;margin-right:-190px;}
+.g-hd-mn1{/*float:right;*/width:100%;}
+.g-hd-mn1c{margin-left:200px;}
+/* 头部顶部菜单 */
+/*.m-hd-top{float:right;margin-top:10px;text-align:right;height:32px;font:400 12px/32px;}
+.u-hd-btn{padding:4px 5px;}
+a.u-username{color:#c00;text-decoration:underline;}
+.u-trans{padding-right:0px;}
+*/
+.m-hd-top{float:right;margin-top:10px;text-align:right;height:32px;font:400 12px/32px;}
+.u-hd-btn{padding:4px 5px;display: inline-block;}
+a.u-username{color:#c00;text-decoration:underline;}
+.u-trans{padding-right:0px;}
+#set_userbox{display: inline-block;}
+/* 头部自定义HTML */
+.m-hd-headhtmlwrap{position:relative;}
+div.m-hd-headhtml{position:absolute;width:50px;height:50px;top:25px;left:260px;}
+
+.g-hd-topmenu{height:30px;line-height:30px;border-bottom:1px solid #eee;background: #F7F7F7;color:666;font: 12px/150% Arial,Verdana,"\5b8b\4f53";}
+.g-hd-topmenu a{color:#666;}
+.f-no-rborder{border-right:none;}
+
+
+/* LOGO */
+.m-logo {float:left;/*margin:10px 0;*/}
+.m-logo img{max-height:100px;_height:expression(this.height > 100 ? "100px" : this.height)}
+
+
+
+/* 导航 */
+.m-nav{position:relative;width: 700px;/* left:25px; FLOAT: right;  RIGHT: 0px;TOP: 0px;*/z-index:2;overflow:hidden;/*width:100%;margin-top:24px;*/}
+.m-nav ul {  PADDING-RIGHT: 0px;PADDING-LEFT: 0px;PADDING-BOTTOM: 0px;MARGIN: 0px;PADDING-TOP: 0px;LIST-STYLE-TYPE: none;}
+.m-nav ul li{position:relative; WIDTH: 116px;  FLOAT: left;HEIGHT: 65px;}
+.m-nav ul a {  DISPLAY: block;CURSOR: pointer;TEXT-DECORATION: none;FONT-WEIGHT: bold;FONT-SIZE: 14px;CURSOR: pointer;}
+.m-nav ul li.u-first a{  FONT-WEIGHT: bold;FONT-SIZE: 14px;}
+.m-nav ul li a{  DISPLAY: block;PADDING-TOP: 10px;HEIGHT: 55px;TEXT-ALIGN: center;}
+.m-nav ul li a:hover{ color:#fff;text-decoration:none;}
+.m-nav ul li ul {*z-index:4; position:absolute;top:64px;left:0px;visibility: hidden;;width:116px;}
+.m-nav ul li ul.last {}
+.m-nav ul li ul li ul {top:0px;left:115px;}
+.m-nav ul li ul.last li ul{left:-116px;width:116px;}
+.m-nav ul ul li {width:116px;}
+.m-nav ul ul li a{width:116px;display:block;margin:0 auto;text-align:center;}
+.u-first a{}
+
+
+/*******mb1********/
+.m-default .m-wg-hd{ background:#282828;height: 30px;overflow: hidden;}
+.m-default .more{color: #666666;float: right;margin:10px;width:47px;height:13px;line-height:1000px;}
+.m-default h2{margin:0 auto;color:#FFF; font-weight:bold;padding:0 8px;float:left;height: 30px;line-height: 30px;}
+
+
+
+
+/* 脚部 */
+.g-ft{clear:both;PADDING-BOTTOM: 30px;PADDING-TOP: 30px;TEXT-ALIGN: center;}
+.g-ft-inner{MARGIN: 0px auto;WIDTH: 1000px;POSITION: relative;}
+.g-ft-inner a{}
+.m-ft-nav{text-align:center; margin-top:10px; height:25px; line-height:25px;}
+.m-ft-nav span{ font-size:10px;margin:0px 8px;}
+.m-ft-text{ text-align:center;padding:0px 0px 5px;}
+.g-main{margin: 0 auto;}
+
+.contribute {
+	width: 80px;
+	height: 70px;
+	z-index: 112px;
+}

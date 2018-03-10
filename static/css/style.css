@@ -1,0 +1,56 @@
+﻿
+/* 主体和头部 */
+body{}
+.g-hd-outer{background: #fff;}
+/* 导航 */
+.m-nav{  BACKGROUND: #b30d1d; }
+.m-nav ul li.u-first a{BACKGROUND: url(../images/nav-2.gif) no-repeat center bottom;COLOR: yellow;}
+.m-nav ul a{COLOR: white;BACKGROUND: url(../images/nav-1.gif) no-repeat center bottom;}
+.m-nav ul li ul li a{ BACKGROUND: url(../images/nav-1.gif) no-repeat center bottom; }
+.m-nav .u-first{border-left:none;}
+.m-nav ul li a {color:fff;}
+.m-nav ul li a:hover{color:yellow;}
+.m-nav ul li ul {background-color:yellow;}
+.m-nav ul li ul li ul {background-color:yellow;}
+.m-nav ul li ul.last li ul{background-color:yellow;color:yellow;}
+.m-nav .select {/*color:yellow;*/}
+.m-nav .select>a{/*color:yellow;*/}
+.m-nav ul ul .select {color:#888;}
+.m-nav ul li ul a{background-image:none;background:#0d55a2;/*color:#fff;*/}
+
+
+/**mb1**/
+.m-default-default h2{background-color:#3b5998;}
+
+/* 搜索 */
+.m-search{margin-top:20px;float: right;height: 28px;border:2px solid #3b5998; }
+.m-search .u-search-key{border: 0 none;color: #ccc;float: left;font-size: 14px;height: 18px;line-height: 18px;padding: 5px;width:330px;}
+.m-search .u-search-btn{color:#fff;background:#3b5998;font-size: 14px;border: 0 none;height: 30px;overflow: hidden;width: 60px;float:right;}
+
+/* 脚部 */
+.g-ft {COLOR: #666;BACKGROUND: url(../images/footer_top_bg.gif) #2d2d2d repeat-x 50% top;}
+.g-ft-inner a{COLOR: #666;}
+.g-ft-inner a.hover{#b30d1d}
+.g-ft,.g-ft a,.ft ahover{}
+.m-ft-nav span{}
+
+
+/* 二级页公共样式 */
+/* 背景颜色 */
+.m-theme14 .m-sort ul li a.u-current, .m-theme25 .u-buy a:hover, .g-common .m-view-time, .m-view-curent, .m-go-buy a.u-sysbtn{background: #3b5998;}
+/* 选中时的字体颜色 */
+.m-theme14 .m-sort ul li a.u-current, .m-theme25 .u-buy a:hover, .g-common .m-view-time, .m-view-curent, .m-go-buy a.u-sysbtn {color: #fff;}
+/* 带颜色的字体 */
+.m-theme8 .u-price, .g-common .u-price, .g-common .m-left-time span{color: #3b5998;} 
+/* 边框颜色 */
+.m-theme14 .m-sort ul li a.u-current, .m-theme25 .u-buy a:hover, .g-common .g-view-menu ul li{border: 1px solid #3b5998;}
+/* 顶部边框 */
+.m-bottom-line, .g-common .g-view-menu ul li.first{border-top: 1px solid #3b5998;}
+/* 左边边框 */
+.g-common .g-view-menu ul li.first {border-left: 1px solid #3b5998;}
+/* 底部边框 */
+.m-view-curent, .m-go-buy a.u-sysbtn{border-bottom: 1px solid #3b5998;}
+/* 购买鼠标放上时的颜色 */
+.m-go-buy a.u-sysbtn:hover, .m-theme25 .u-buy a:hover{background: #4c68a2;}
+/* 购买时间底色 */
+.g-common .m-left-time span {background: #ffed03;}
