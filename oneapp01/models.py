@@ -53,7 +53,7 @@ class t_voluntary_activity(models.Model):
     contactphone=models.IntegerField(default='0')
     servicerequirement = models.CharField(max_length=50,default='要求')
     contactpeople=models.CharField(max_length=25,default='name')
-    image_link=models.CharField(max_length=25,default='img')
+    image_link=models.CharField(max_length=100,default='picture/.jpg')
     activitycode=models.IntegerField(default='000')
 
     # def __unicode__(self):
@@ -64,13 +64,13 @@ class t_parents_child_campaign(models.Model):
     place=models.CharField(max_length=50,default='place')
     time=models.DateField()
     numberpeople=models.IntegerField(default='0')
+    shortcontent=models.CharField(max_length=100,default='shortcontent')
     content=models.CharField(max_length=150,default='content')
     contactname=models.CharField(max_length=150,default='childred parents')
     contactphone=models.IntegerField(default='112223333')
-    image_link=models.CharField(max_length=25,default='img')
+    image_link=models.CharField(max_length=100,default='picture/.jpg')
 
-    def __unicode__(self):
-        return self.content.encode('utf-8')
+
 
 #people ask help
 class t_ask_help(models.Model):
@@ -80,8 +80,6 @@ class t_ask_help(models.Model):
     key_word=models.CharField(max_length=50,default='关键字')
     content=models.CharField(max_length=150,default='content')
     state=models.BooleanField(default=False)
-    def __unicode__(self):
-        return self.content.encode('utf-8')
 
 #people donate thing
 class t_donate(models.Model):
@@ -91,8 +89,6 @@ class t_donate(models.Model):
     goods=models.CharField(max_length=50,default='help thing')
     when=models.CharField(max_length=25,default='time')
 
-    def __unicode__(self):
-        return self.help_content.encode('utf-8')
 
 #charity bazaar
 class t_charity_bazaar(models.Model):
@@ -102,8 +98,26 @@ class t_charity_bazaar(models.Model):
     content=models.CharField(max_length=150,default='content')
     image_link=models.CharField(max_length=25,default='img')
 
-    def __unicode__(self):
-        return self.content.encode('utf-8')
+    # def __unicode__(self):
+    #     return self.content.encode('utf-8')
+#postcard
+class postcard(models.Model):
+    name=models.CharField(max_length=100,default='postcard')
+    price=models.CharField(max_length=50,default='price')
+    takepicturetime=models.DateField()
+    linkimage=models.CharField(max_length=100,default='postcord/picture/.jpg')
+    postcardnumber=models.IntegerField(max_length=25,default='001')
+    jumplink=models.CharField(max_length=1000,default='')
 
-
-
+class VoluntaryTeaching(models.Model):
+    place = models.CharField(max_length=100, default='地点')
+    time = models.DateField()
+    closingtime = models.DateField()
+    numberpeople = models.IntegerField(default='0')
+    shortcontent = models.CharField(max_length=100, default='简介')
+    content = models.CharField(max_length=250, default='内容')
+    contactphone = models.IntegerField(default='0')
+    servicerequirement = models.CharField(max_length=50, default='要求')
+    contactpeople = models.CharField(max_length=25, default='name')
+    image_link = models.CharField(max_length=100, default='picture/.jpg')
+    activitycode = models.IntegerField(default='000')

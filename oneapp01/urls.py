@@ -11,6 +11,7 @@ urlpatterns=[
    url('^agribusiness/$',views.agribusiness,name='agribusiness'),
    url('^agribusiness/agribusiness/$',views.agribusinesschild,name='agribusinesschild'),
    url('^agribusiness/agribusinesspay/$',views.agribusinesspay,name='agribusinesspay'),
+   url('^freebuy/$',views.freebuy,name='freebuy')
    #
 
 

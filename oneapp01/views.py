@@ -2,7 +2,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader,RequestContext
-from oneapp01.models import UserInfo, t_voluntary_activity
+from oneapp01.models import UserInfo, t_voluntary_activity, postcard, t_parents_child_campaign, VoluntaryTeaching
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 
 
@@ -10,7 +10,45 @@ from django.views.decorators.csrf import csrf_exempt, csrf_protect
 # Create your views here.
 #HttpRequset
 def index(request):
-    return render(request,'one/default.html',{'displaytwo':'none','display':'block'} )
+    #get post cards message
+    b = postcard.objects.all()[:9]      #下面的语句返回前面9 个对象(LIMIT 5)：
+    a = len(b)
+    #get active message
+    activemessage = t_voluntary_activity.objects.all()[:4]
+    activelen = len(activemessage)
+    active = {}
+    for i in range(activelen):
+        list = {'shortcontent':activemessage[i].shortcontent,'numberpeople':activemessage[i].numberpeople,'image_link':activemessage[i].image_link}
+        active[i] = list
+
+    # get VoluntaryTeaching message
+    VoluntaryTeachingmessage = VoluntaryTeaching.objects.all()[:3]
+    VoluntaryTeachinglen = len(VoluntaryTeachingmessage)
+    voluntaryteaching = {}
+    for i in range(VoluntaryTeachinglen):
+        list = {'shortcontent': VoluntaryTeachingmessage[i].shortcontent, 'image_link': VoluntaryTeachingmessage[i].image_link}
+        voluntaryteaching[i] = list
+
+    # get t_parents_child_campaign message
+    parents_childmessage = t_parents_child_campaign.objects.all()[:2]
+    parents_childlen = len(parents_childmessage)
+    parents_child = {}
+    for i in range(parents_childlen):
+        list = {'shortcontent':parents_childmessage[i].shortcontent,'image_link':parents_childmessage[i].image_link}
+        parents_child[i] = list
+
+
+    c = {}
+    d = {'displaytwo':'none','display':'block'}
+    for i in range(0,a,1):
+        list = {'name':b[i].name,'takepicturetime':b[i].takepicturetime,'linkimage':b[i].linkimage,'price':b[i].price,'jumplink':b[i].jumplink,}
+        c[i]=list
+    c['d']=d
+    c['active'] = active
+    c['parents_child'] = parents_child
+    c['voluntaryteaching'] = voluntaryteaching
+
+    return render(request,'one/default.html',c)
 #active page
 def active(request):
     a=request.GET['a']
@@ -21,7 +59,7 @@ def active(request):
     else:
         list={'place':b.place,'releasetime':b.time,'closetime':b.closingtime,'shortcontent':b.shortcontent,
              'numberpeople':b.numberpeople,'content':b.content,'contactphone':b.contactphone,'contactpeople':b.contactpeople,
-              'servicerequirement':b.servicerequirement,'picture':b.image_link}
+              'servicerequirement':b.servicerequirement,'image_link':b.image_link}
 
     return render(request,'one/active .html',list)
 #login
@@ -135,3 +173,10 @@ def agribusinesspay(request):
     a = request.GET['name']
     if request.method == 'GET':
         return render(request,'one/agribusinesspay.html')
+
+#亲子活动
+def freebuy(request):
+
+    if request.method == 'GET':
+        a = request.GET['name']
+        return render(request,'one/freebuy.html')

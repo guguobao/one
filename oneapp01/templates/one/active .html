@@ -233,7 +233,7 @@
 	-->
 <div class="main-content">
 	<div class="active">
-	    <h1>测试中</h1>
+	    <h1>{{ shortcontent }}</h1>
 		<div class="under_article">
 			<div class="sub_head">
 				<div class="sub_heading_con">
@@ -260,14 +260,9 @@
 
 
 			        <div class="news_pic">
-		                		<img id="picture" src="{% static "picture/sogood.jpg"%}"/>
+		                		<img id="picture" src={% static image_link %}/>
                     </div>
               <script>
-                       <!--var a="sogood.jpg";-->
-                        <!--alert(a);-->
-                        <!--var b="{% static "picture/";-->
-                        <!--var c=b.concat(a,""%}");-->
-                        <!--document.getElementById("picture").src=c;-->
                     </script>
 
                     <div class="phase_item">

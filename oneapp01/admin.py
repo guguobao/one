@@ -32,6 +32,13 @@ class t_donateAdmin(admin.ModelAdmin):
 class t_charity_bazaarAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'goods', 'phone_num', 'content', 'image_link']
 
+class postcardAdmin(admin.ModelAdmin):
+    list_display = ['id','name','price','takepicturetime','linkimage','postcardnumber','jumplink']
+
+class VoluntaryTeachingAdmin(admin.ModelAdmin):
+    list_display = ['id', 'place', 'time', 'numberpeople', 'content', 'image_link', 'shortcontent',
+                    'servicerequirement', 'contactpeople', 'contactphone', 'closingtime', 'activitycode']
+
 
 admin.site.register(UserInfo,UserInfoAdmin)
 admin.site.register(naunfeng,naunfengAdmin)
@@ -41,3 +48,5 @@ admin.site.register(t_parents_child_campaign,t_parents_child_campaignAdmin)
 admin.site.register(t_ask_help,t_ask_helpAdmin)
 admin.site.register(t_donate,t_donateAdmin)
 admin.site.register(t_charity_bazaar,t_charity_bazaarAdmin)
+admin.site.register(postcard,postcardAdmin)
+admin.site.register(VoluntaryTeaching,VoluntaryTeachingAdmin)

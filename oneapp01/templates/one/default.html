@@ -227,10 +227,10 @@ $("#fx_fxpc").click(function(){
 			<!--是否显示整体注册条-->
 			<style type="text/css">
 				#m-head-regist{
-				display: {{ display }};
+				display: {{ d.display }};
 				}
 				#m-head-regist22 {
-				display: {{ displaytwo }};
+				display: {{ d.displaytwo }};
 				}
 			</style>
 
@@ -474,8 +474,6 @@ $("#fx_fxpc").click(function(){
     	
     </script>
 		<div class="clearing"></div>
-									
-
 
  <!-- 导航开始 strat -->
 <!-- 浮动fixed -->
@@ -553,11 +551,11 @@ $("#fx_fxpc").click(function(){
 				                        			            </li>
 					<li class="active first-li">  
 			<span style="display:none"></span>
-            								<a class="first-a" href="/agribusiness" >暖风农商</a>
+            								<a class="first-a" href="/agribusiness" target="_blank">暖风农商</a>
 				                        			            </li>
 					<li class="active first-li">  
 			<span style="display:none"></span>
-            								<a class="first-a" href="/help" >关于我们</a>
+            								<a class="first-a" href="/help" target="_blank">关于我们</a>
 				                        			            </li>
 		 
         </ul>                 
@@ -780,50 +778,50 @@ $(window).scroll(function(){
 			<div class="clearing"></div>
 									<div class="m-theme259-list" data-scroll-reveal="enter top over 1s">
 				<div class="m-theme259-img">
-					<a href="/active?a=001" target="_blank"><img class='lazyload' data-original="{%static "picture/logo .jpg"%}" ></a>
+					<a href="/active?a=001" target="_blank"><img class='lazyload' data-original={%static active.0.image_link  %} ></a>
 				</div>
 				<div class="m-theme259-title">
-				<a href="/active?a=001" target="_blank">暖分公益机构将在东莞理工举行</a>
+				<a href="/active?a=001" target="_blank">{{ active.0.shortcontent }}</a>
 				</div>
 				<div>
-					<span class="u-price"><em><span style="color:#999;">人数：</span></em>49.00</span>
-					<span class="u-number">还缺：56人</span>
+					<span class="u-price"><em><span style="color:#999;">人数：</span></em>{{ active.0.numberpeople}}</span>
+					<span class="u-number">还缺：{{ active.0.numberpeople }}人</span>
 				</div>
 			</div>
 									<div class="m-theme259-list" data-scroll-reveal="enter top over 1s">
 				<div class="m-theme259-img">
-					<a href="/active?a=002" target="_blank"><img class='lazyload' data-original="{%static "picture/logo .jpg"%}" ></a>
+					<a href="/active?a=002" target="_blank"><img class='lazyload' data-original={%static active.1.image_link  %} ></a>
 				</div>
 				<div class="m-theme259-title">
-				<a href="/active?a=002" target="_blank">暖分公益机构将在东莞理工举行</a>
+				<a href="/active?a=002" target="_blank">{{ active.1.shortcontent }}</a>
 				</div>
 				<div>
-					<span class="u-price"><em><span style="color:#999;">人数：</span></em>49.00</span>
-					<span class="u-number">还缺：56人</span>
+					<span class="u-price"><em><span style="color:#999;">人数：</span></em>{{ active.1.numberpeople }}</span>
+					<span class="u-number">还缺：{{ active.1.numberpeople }}人</span>
 				</div>
 			</div>
 									<div class="m-theme259-list" data-scroll-reveal="enter top over 1s">
 				<div class="m-theme259-img">
-					<a href="/active?a=003" target="_blank"><img class='lazyload' data-original="{%static "picture/logo .jpg"%}" ></a>
+					<a href="/active?a=003" target="_blank"><img class='lazyload' data-original={%static active.2.image_link  %} ></a>
 				</div>
 				<div class="m-theme259-title">
-				<a href="/active?a=003" target="_blank">需要一堆人打开附件网线收款方</a>
+				<a href="/active?a=003" target="_blank">{{ active.2.shortcontent }}</a>
 				</div>
 				<div>
-					<span class="u-price"><em><span style="color:#999;">人数：</span></em>49.00</span>
-					<span class="u-number">还缺：56人</span>
+					<span class="u-price"><em><span style="color:#999;">人数：</span></em>{{ active.2.numberpeople }}</span>
+					<span class="u-number">还缺：{{ active.2.numberpeople }}人</span>
 				</div>
 			</div>
 									<div class="m-theme259-list" data-scroll-reveal="enter top over 1s">
 				<div class="m-theme259-img">
-					<a href="/active?a=004" target="_blank"><img class='lazyload' data-original="{%static "picture/logo .jpg"%}" ></a>
+					<a href="/active?a=004" target="_blank"><img class='lazyload' data-original={%static active.3.image_link  %} ></a>
 				</div>
 				<div class="m-theme259-title">
-				<a href="/active?a=004" target="_blank"> 从广东省分公司的分工分公司公司发货</a>
+				<a href="/active?a=004" target="_blank">{{ active.3.shortcontent }}</a>
 				</div>
 				<div>
-					<span class="u-price"><em><span style="color:#999;">人数：</span></em>49.00</span>
-					<span class="u-number">还缺：56人</span>
+					<span class="u-price"><em><span style="color:#999;">人数：</span></em>{{ active.3.numberpeople }}</span>
+					<span class="u-number">还缺：{{ active.3.numberpeople }}人</span>
 				</div>
 			</div>
 						<div class="clearing"></div>
@@ -856,24 +854,24 @@ $(window).scroll(function(){
 		<div class="m-theme297">
 						<div class="m-theme297-list" data-scroll-reveal="enter from the top and move 300px over 1s">
 				<div class="m-theme297-img">
-									<a href="/teamview_2320540.html" target="_blank">
-										<img class='lazyload' data-original="http://cdn047.yun-img.com/static/upload/a00697t/team/20180122112126_29453.jpg" alt="韶关黄浦镇荷花村古某某家体验生活">
+									<a href="/freebuy?name=country" target="_blank">
+										<img class='lazyload' data-original={% static parents_child.0.image_link %} alt={{ parents_child.0.shortcontent }}>
 					</a>
 				</div>
 				<div class="m-theme297-title" >
-									<a href="/teamview_2320540.html" target="_blank">韶关黄浦镇荷花村古某某家体验生活</a>
+									<a href="/freebuy?name=country" target="_blank">{{ parents_child.0.shortcontent }}</a>
 					
 				</div>
 							</div>
 						<div class="m-theme297-list" data-scroll-reveal="enter from the top and move 300px over 1s">
+
 				<div class="m-theme297-img">
-									<a href="/teamview_2320533.html" target="_blank">
-										<img class='lazyload' data-original="http://cdn043.yun-img.com/static/upload/a00697t/team/20180122115419_71746.jpg" alt="韶关黄浦镇荷花村古某某家体验生活">
+									<a href="/freebuy?name=city" target="_blank">
+										<img class='lazyload' data-original={% static parents_child.1.image_link %} alt={{ parents_child.1.shortcontent }}>
 					</a>
 				</div>
 				<div class="m-theme297-title" >
-									<a href="/teamview_2320533.html" target="_blank">韶关黄浦镇荷花村古某某家体验生活</a>
-					
+									<a href="/freebuy?name=city" target="_blank">{{ parents_child.1.shortcontent }}</a>
 				</div>
 							</div>
 						<div class="f-clear">&nbsp;</div>
@@ -893,65 +891,29 @@ $(window).scroll(function(){
 		});
 	}
 </script><!-- 模块 -->
-<div class="m-wg m-default m-default-default" id="visualmodule_25" style='width:1148px;height:289px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:-10px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
-		<style type='text/css' class='m-wg-ct-style'>#visualmodule_25 .m-wg-ct{font-family:inherit;padding-left:0px;}</style>	<div class="m-wg-ct">
-		<!-- 图片2栏目 -->
-		<div class="m-theme259">
-			<div class="clearing"></div>
-									<div class="m-theme259-list" data-scroll-reveal="enter top over 1s">
-				<div class="m-theme259-img">
-					<a href="/teamview_2333805.html" target="_blank"><img class='lazyload' data-original="http://cdn045.yun-img.com/static/upload/a00697t/team/20180122165756_98157.jpg" ></a>
-				</div>
-				<div class="m-theme259-title">
-				<a href="/teamview_2333805.html" target="_blank">韶关黄浦镇荷花村哈某某家体验生活</a>
-				</div>
-				<div>
-					<span class="u-price"><em><span style="color:#999;">价格：</span>￥</em>990.00</span>
-					<span class="u-number">体验时间：7天</span>
-				</div>
-			</div>
-									<div class="m-theme259-list" data-scroll-reveal="enter top over 1s">
-				<div class="m-theme259-img">
-					<a href="/teamview_2332953.html" target="_blank"><img class='lazyload' data-original="http://cdn065.yun-img.com/static/upload/a00697t/team/20180122155533_88005.jpg" ></a>
-				</div>
-				<div class="m-theme259-title">
-				<a href="/teamview_2332953.html" target="_blank">韶关黄浦镇荷花村哈某某家体验生活</a>
-				</div>
-				<div>
-					<span class="u-price"><em><span style="color:#999;">价格：</span>￥</em>990.00</span>
-					<span class="u-number">体验时间：7天</span>
-				</div>
-			</div>
-									<div class="m-theme259-list" data-scroll-reveal="enter top over 1s">
-				<div class="m-theme259-img">
-					<a href="/teamview_2332897.html" target="_blank"><img class='lazyload' data-original="http://cdn045.yun-img.com/static/upload/a00697t/team/20180122153415_71611.jpg" ></a>
-				</div>
-				<div class="m-theme259-title">
-				<a href="/teamview_2332897.html" target="_blank">韶关黄浦镇荷花村哈某某家体验生活</a>
-				</div>
-				<div>
-					<span class="u-price"><em><span style="color:#999;">价格：</span>￥</em>990.00</span>
-					<span class="u-number">体验时间：7天</span>
-				</div>
-			</div>
-									<div class="m-theme259-list" data-scroll-reveal="enter top over 1s">
-				<div class="m-theme259-img">
-					<a href="/teamview_2332775.html" target="_blank"><img class='lazyload' data-original="http://cdn043.yun-img.com/static/upload/a00697t/team/20180122143248_62843.jpg" ></a>
-				</div>
-				<div class="m-theme259-title">
-				<a href="/teamview_2332775.html" target="_blank">韶关黄浦镇荷花村哈某某家体验生活</a>
-				</div>
-				<div>
-					<span class="u-price"><em><span style="color:#999;">价格：</span>￥</em>990.00</span>
-					<span class="u-number">体验时间：7天</span>
-				</div>
-			</div>
-						<div class="clearing"></div>
-		</div>
-		<!-- 图片2栏目 end -->
-	</div>
-</div>
-<!-- 站点公告中心模块 #扶贫千万里，服务零距离！-->
+	<!---->
+<!--<div class="m-wg m-default m-default-default" id="visualmodule_25" style='width:1148px;height:289px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:-10px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>-->
+		<!--<style type='text/css' class='m-wg-ct-style'>#visualmodule_25 .m-wg-ct{font-family:inherit;padding-left:0px;}</style>	<div class="m-wg-ct">-->
+		<!--&lt;!&ndash; 图片2栏目 &ndash;&gt;-->
+		<!--<div class="m-theme259">-->
+			<!--<div class="clearing"></div>-->
+									<!--<div class="m-theme259-list" data-scroll-reveal="enter top over 1s">-->
+				<!--<div class="m-theme259-img">-->
+					<!--<a href="/teamview_2333805.html" target="_blank"><img class='lazyload' data-original="http://cdn045.yun-img.com/static/upload/a00697t/team/20180122165756_98157.jpg" ></a>-->
+				<!--</div>-->
+				<!--<div class="m-theme259-title">-->
+				<!--<a href="/teamview_2333805.html" target="_blank">韶关黄浦镇荷花村哈某某家体验生活</a>-->
+				<!--</div>-->
+				<!--<div>-->
+					<!--<span class="u-price"><em><span style="color:#999;">价格：</span>￥</em>990.00</span>-->
+					<!--<span class="u-number">体验时间：7天</span>-->
+
+		<!--&lt;!&ndash; 图片2栏目 end &ndash;&gt;-->
+	<!--</div>-->
+<!--</div>-->
+
+
+	<!-- 站点公告中心模块 #扶贫千万里，服务零距离！-->
 <div class="m-wg m-default m-default-default" id="visualmodule_27" style='width:1153px;height:115px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:20px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
 			<div class="m-wg-ct">
 		<div class='m-theme28'><img class='lazyload' data-original="http://cdn037.yun-img.com/static/upload/a00697t/visualtoolkit/20180119160851_49051.jpg" width="1153" height="115" alt="" /> 
@@ -963,7 +925,7 @@ $(window).scroll(function(){
 <!-- 模块 end  duangou-->
 <!-- 站点公告中心模块 -->
 <div class="m-wg m-default m-default-default" id="visualmodule_28" style='width:570px;height:500px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:20px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
-		<style type='text/css' class='m-wg-ct-style'>#visualmodule_28 .m-wg-ct{font-family:inherit;background-color:#26be60;padding-left:30px;padding-top:50px;}</style>	<div class="m-wg-ct">
+		<style type='text/css' class='m-wg-ct-style'>#visualmodule_28 .m-wg-ct{font-family:inherit;background-color:#999999;padding-left:30px;padding-top:50px;}</style>	<div class="m-wg-ct">
 		<div class='m-theme28'><div style="width:570px;height:500px;">
 	<p style="font-size:30px;font-weight:bold;color:#ffffff;line-height:30px;">
 		”1+1+1“公益模式
@@ -1002,7 +964,51 @@ $(window).scroll(function(){
 <div class="m-wg m-default m-default-default" id="visualmodule_26" style='width:570px;height:500px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:13px;margin-right:0px;margin-top:20px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
 		<style type='text/css' class='m-wg-ct-style'>#visualmodule_26 .m-wg-ct{font-family:inherit;padding-left:0px;padding-top:0px;}</style>	<div class="m-wg-ct">
 		<div class='m-theme28'>
-		<img class='lazyload' data-original="http://cdn035.yun-img.com/static/upload/a00697t/visualtoolkit/20180119164534_25917.jpg" width="570" height="500" alt="" />
+		<!--<img class='lazyload' data-original="http://cdn035.yun-img.com/static/upload/a00697t/visualtoolkit/20180119164534_25917.jpg" width="570" height="500" alt="" />-->
+
+<div style="text-align:center;">
+ <br />
+  <br /> <br /> <br />
+
+  <video id="video1" width="420" style="margin-top:15px;">
+    <source src="{% static "video/mov_bbb.mp4"%}" type="video/mp4" />
+
+    Your browser does not support HTML5 video.
+  </video>
+	<br />
+	  <button onclick="playPause()">播放/暂停</button>
+  <button onclick="makeBig()">大</button>
+  <button onclick="makeNormal()">中</button>
+  <button onclick="makeSmall()">小</button>
+</div>
+
+<script type="text/javascript">
+var myVideo=document.getElementById("video1");
+
+function playPause()
+{
+if (myVideo.paused)
+  myVideo.play();
+else
+  myVideo.pause();
+}
+
+function makeBig()
+{
+myVideo.width=560;
+}
+
+function makeSmall()
+{
+myVideo.width=320;
+}
+
+function makeNormal()
+{
+myVideo.width=420;
+}
+</script>
+
 		</div>
 	</div>
 </div>
@@ -1035,26 +1041,26 @@ $(window).scroll(function(){
 </style>
 <div class="tup">
 	<ul>
-		<a href="#"> 
+		<a href="#">
 		<li>
 			<div class="tm">
-				韶关市黄浦镇荷花村荷花小学义教
+				{{ voluntaryteaching.0.shortcontent }}
 			</div>
-<img class='lazyload' data-original="http://cdn053.yun-img.com/static/upload/a00697t/visualtoolkit/20180119170638_74686.jpg" alt="" /> 
+<img style="width:370px;height:180px;" class='lazyload' data-original={% static voluntaryteaching.0.image_link %} alt="" />
 		</li>
 </a> <a href="#"> 
 		<li style="margin-left:20px;">
 			<div class="tm">
-				韶关市黄浦镇荷花村荷花小学义教
+				{{ voluntaryteaching.1.shortcontent }}
 			</div>
-<img class='lazyload' data-original="http://cdn043.yun-img.com/static/upload/a00697t/visualtoolkit/20180119170722_27515.jpg" alt="" /> 
+<img style="width:370px;height:180px;" class='lazyload' data-original={% static voluntaryteaching.1.image_link %} alt="" />
 		</li>
 </a> <a href="#"> 
 		<li style="margin-left:20px;">
 			<div class="tm">
-				韶关市黄浦镇荷花村荷花小学义教
+				{{ voluntaryteaching.2.shortcontent }}
 			</div>
-<img class='lazyload' data-original="http://cdn065.yun-img.com/static/upload/a00697t/visualtoolkit/20180119170742_55079.jpg" alt="" /> 
+<img style="width:370px;height:180px;" class='lazyload' data-original={% static voluntaryteaching.2.image_link %} alt="" />
 		</li>
 </a> 
 	</ul>
@@ -1083,113 +1089,117 @@ $(window).scroll(function(){
 <div class="m-wg m-default m-default-default" id="visualmodule_32" style='width:1154px;height:416px;float:left;border-style:none;border-width:0px;border-color:#333333;margin-left:0px;margin-right:0px;margin-top:0px;margin-bottom:10px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;'>
 			<div class="m-wg-ct">
 		<!-- 图片简介栏目 -->
+
+
 		<div class="m-theme257">
 									<div class="m-theme257-al" data-scroll-reveal="enter bottom over 1s">		
 				<div class="m-theme257-img">
-					<a href="/newsdetail_815455.html" target="_blank">
-						<img class='lazyload' data-original="http://cdn033.yun-img.com/static/upload/a00632t/news/20161202112934_22441.png" alt="山区孩子拍摄的精美明信片）">
+					<a href={{ 0.jumplink }} target="_blank">
+						<img class='lazyload' data-original={%static  0.linkimage %} alt="山区孩子拍摄的精美明信片）">
 					</a>
 				</div>
 				<div class="m-theme257-content">
 					<div class="m-theme257-title">
-						<a href="/newsdetail_815455.html" target="_blank">山区孩子拍摄的精美明信片</a>
+						<a href={{ 0.jumplink }} target="_blank">{{ 0.name }}</a>
 					</div>
 					<div class="m-theme257-txt">
 					<a >
-						价格：9.9元
+						价格：{{ 0.price }}元
 					</a>
 					</div>
-					<div class="m-theme257-time">拍摄日期：2016-12-01</div>
+					<div class="m-theme257-time">拍摄日期：{{ 0.takepicturetime }}</div>
 				</div>
 			</div>
+
+
 									<div class="m-theme257-al" data-scroll-reveal="enter bottom over 1s">		
 				<div class="m-theme257-img">
-					<a href="/newsdetail_815454.html" target="_blank">
-						<img class='lazyload' data-original="http://cdn033.yun-img.com/static/upload/a00632t/news/20161202112758_59859.png" alt="山区孩子拍摄的精美明信片">
+					<a href={{ 1.jumplink }} target="_blank">
+						<img class='lazyload' data-original={%static  0.linkimage %} alt="山区孩子拍摄的精美明信片">
 					</a>
 				</div>
 				<div class="m-theme257-content">
 					<div class="m-theme257-title">
-						<a href="/newsdetail_815454.html" target="_blank">山区孩子拍摄的精美明信片</a>
+						<a href={{ 1.jumplink }} target="_blank">{{ 1.name }}</a>
 					</div>
 					<div class="m-theme257-txt">
-					<a href="/newsdetail_815454.html" target="_blank">
-					价格：10元
+					<a >
+					价格：{{ 1.price }}元
 					</a>
 					</div>
-					<div class="m-theme257-time">拍摄日期：2016-12-02</div>
+					<div class="m-theme257-time">拍摄日期：{{ 1.takepicturetime }}</div>
 				</div>
 			</div>
 									<div class="m-theme257-al" data-scroll-reveal="enter bottom over 1s">		
 				<div class="m-theme257-img">
-					<a href="/newsdetail_815453.html" target="_blank">
-						<img class='lazyload' data-original="http://cdn033.yun-img.com/static/upload/a00632t/news/20161202112401_39390.png" alt="山区孩子拍摄的精美明信片">
+					<a href={{ 2.jumlink }} target="_blank">
+						<img class='lazyload' data-original="{%static  0.linkimage %}" alt="山区孩子拍摄的精美明信片">
 					</a>
 				</div>
 				<div class="m-theme257-content">
 					<div class="m-theme257-title">
-						<a href="/newsdetail_815453.html" target="_blank">山区孩子拍摄的精美明信片</a>
+						<a href={{ 2.jumlink }} target="_blank">{{ 2.name }}</a>
 					</div>
 					<div class="m-theme257-txt">
-					<a href="/newsdetail_815453.html" target="_blank">
-						价格：11元
+					<a>
+						价格：{{ 2.price }}元
 					</a>
 					</div>
-					<div class="m-theme257-time">拍摄日期：2016-12-02</div>
+					<div class="m-theme257-time">拍摄日期：{{  2.takepicturetime }}</div>
 				</div>
 			</div>
 									<div class="m-theme257-al" data-scroll-reveal="enter bottom over 1s">		
 				<div class="m-theme257-img">
-					<a href="/newsdetail_815452.html" target="_blank">
-						<img class='lazyload' data-original="http://cdn033.yun-img.com/static/upload/a00632t/news/20161202111917_57006.png" alt="山区孩子拍摄的精美明信片">
+					<a href={{ 3.jumplink }} target="_blank">
+						<img class='lazyload' data-original="{%static  0.linkimage %}" alt="山区孩子拍摄的精美明信片">
 					</a>
 				</div>
 				<div class="m-theme257-content">
 					<div class="m-theme257-title">
-						<a href="/newsdetail_815452.html" target="_blank">山区孩子拍摄的精美明信片</a>
+						<a href={{ 3.jumplink }} target="_blank">{{3.name}}</a>
 					</div>
 					<div class="m-theme257-txt">
-					<a href="/newsdetail_815452.html" target="_blank">
-				    价格：200元
+					<a >
+				    价格：{{ 3.price }}元
 					</a>
 					</div>
-					<div class="m-theme257-time">拍摄日期：2016-12-02</div>
+					<div class="m-theme257-time">拍摄日期：{{ 3.takepicturetime }}</div>
 				</div>
 			</div>
 									<div class="m-theme257-al" data-scroll-reveal="enter bottom over 1s">		
 				<div class="m-theme257-img">
-					<a href="/newsdetail_815451.html" target="_blank">
-						<img class='lazyload' data-original="http://cdn033.yun-img.com/static/upload/a00632t/news/20161202111506_83320.png" alt="儿童手表">
+					<a href={{ 4.jumplink }} target="_blank">
+						<img class='lazyload' data-original={%static  0.linkimage %} alt="儿童手表">
 					</a>
 				</div>
 				<div class="m-theme257-content">
 					<div class="m-theme257-title">
-						<a href="/newsdetail_815451.html" target="_blank">儿童手表</a>
+						<a href={{ 4.jumplink }} target="_blank">{{ 4.name }}</a>
 					</div>
 					<div class="m-theme257-txt">
-					<a href="/newsdetail_815451.html" target="_blank">
-					价格：50元
+					<a>
+					价格：{{ 4.price }}元
 					</a>
 					</div>
-					<div class="m-theme257-time">出售日期：2016-12-01</div>
+					<div class="m-theme257-time">出售日期：{{ 4.takepicturetime }}</div>
 				</div>
 			</div>
 									<div class="m-theme257-al" data-scroll-reveal="enter bottom over 1s">		
 				<div class="m-theme257-img">
-					<a href="/newsdetail_815450.html" target="_blank">
-						<img class='lazyload' data-original="http://cdn033.yun-img.com/static/upload/a00632t/news/20161202111134_68969.jpg" alt="哈哈哈哈哈哈哈哈哈哈">
+					<a href={{ 5.jumplink }} target="_blank">
+						<img class='lazyload' data-original={%static  0.linkimage %} alt="哈哈哈哈哈哈哈哈哈哈">
 					</a>
 				</div>
 				<div class="m-theme257-content">
 					<div class="m-theme257-title">
-						<a href="/newsdetail_815450.html" target="_blank">哈哈哈哈哈哈哈哈</a>
+						<a href={{ 5.jumplink }} target="_blank">{{ 5.name }}</a>
 					</div>
 					<div class="m-theme257-txt">
-					<a href="/newsdetail_815450.html" target="_blank">
-					价格：无价
+					<a>
+					价格：{{5.price}}元
 					</a>
 					</div>
-					<div class="m-theme257-time">出售日期：2016-12-02</div>
+					<div class="m-theme257-time">出售日期：{{ 5.takepicturetime }}</div>
 				</div>
 			</div>
 			

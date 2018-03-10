@@ -1,0 +1,207 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>义卖</title>
+</head>
+	<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}	
+	body {
+    color: #333;
+    background: #ededed;
+/*    font-family: "Microsoft Yahei";*/
+	}
+	.header{
+		width: 1350px;
+		height: 120px;
+		background-color: aqua;
+		margin: 0 auto;
+			
+	}
+	.header .headerimg{
+		width: 100px;
+		height: auto;
+		margin-left: 300px;
+		margin-top: 45px;
+		position: absolute;
+	}
+	.header .title{
+		background-color: aliceblue;
+		width: 660px;
+		height: 60px;
+		margin-left: 500px;
+		margin-top: 60px;
+		padding-left: 50px;
+		position: absolute;
+	}
+	.header .titleul{
+		text-decoration: none;
+		list-style: none;
+		position: relative
+	}
+	.header .titleul li{
+		float: left;
+		height: 68px !important;
+		width: 108px;
+		position: relative
+	}
+	.header .titleul li a{
+	line-height: 71px;
+	text-align: center;
+	color: #000000;
+	font-size: 15px;
+	text-decoration: none;
+	}
+	.header .titleul li a:hover{
+		color: green;
+	}
+	.product-content{
+		width: 1210px;
+/*		background-color: chocolate;*/
+		height: 1000px;
+		margin: 0 auto;
+		}
+		.product-content .product-intro{
+			position: absolute;
+			margin-top: 10px;
+			margin-bottom: 10px;
+/*			background-color: cornflowerblue;*/
+			width: 1200px;
+			height: 750px;
+			margin: 0 auto;
+		}
+		.product-content .product-intro .preview-wrap img{
+			margin-top: 15px;
+			margin-left: 10px;
+			border: 0;
+			vertical-align: middle;
+		}
+		.product-content .product-intro .paycontent{
+			position: absolute;
+			top: 0px;
+			right: 0;
+			width: 600px;
+			background: #EEEEEE;
+			height: 500px;
+			margin-right: 50px;
+			margin-top: 15px;
+		}
+		.paycontent .title{
+			text-align: left;
+			font-size: 25px;
+			margin-left: 50px;
+			margin-top: 20px;
+			
+		}
+		.paycontent .paycontent2{
+			width: 500px;
+			height: 70px;
+			background-color:#F7C998;
+			margin-left: 40px;
+			margin-top: 10px;
+		}
+	
+		.paycontent .paycontent2 a{
+			line-height: 70px;
+		}
+		.paycontent .paycontent2 .pride{
+			color: red;
+			font-size: 30px;
+		}
+		.paycontent .paycontent2 .line{
+			line-height: 70px;
+			font-size: 40px;
+			
+		} 
+		.input{
+		width: 150px;
+			background-color: #EF494C;
+			margin-left: 30px;
+			margin-top: 50px;
+		}
+	</style>
+<body>
+	<!--
+	导航栏
+-->
+<div class="header">
+		
+	<img class="headerimg" alt="暖风公益" src="{% static "picture/logo2.jpg"%}"/>
+		<div class="title">
+			 <ul class="titleul">
+				<li>
+					<a href="index.html">网站首页</a>
+				 </li>
+				<li>
+					<a href="#">暖风活动</a>
+				 </li>
+				<li>
+					<a href="#">亲子活动</a>
+				 </li>
+				 <li>
+					 <a href="#">帮扶</a>
+				 </li>
+				 <li>
+					 <a href="#">暖风农商</a>
+				 </li>
+				 <li>
+					 <a href="#">关于我们</a>
+				 </li>
+			</ul>
+		</div>
+	</div>	
+	<!--
+	商品
+	-->
+<div class="product-content">
+	<div class="product-intro">
+		 <div class="preview-wrap">
+			 <div class="preview" id="preview">
+				 <div id="spec-n1" class="jqzoom main-img">
+				 	<img id="spec-img" width="450" src="{% static "picture/logo2.jpg" %}"  alt="暖风公益"/>
+					 
+<!--					<div class="jqzoomPub" style="width: 303.75px;height: 303.75;visibility: visible;top: 0px;left: 900.333px;">&nbsp;</div>-->
+				 </div>
+			 </div>
+		</div>
+		<!--
+		支付详情
+		-->
+		 <div class="paycontent">
+			<p class="title">亲子活动亲子行活动报名</p>
+			 <div class="paycontent2">
+				 &nbsp;<a>价格:</a>
+			 	 <a class="pride">&nbsp;&yen;700-1000</a>
+				 <a class="line">&nbsp;&nbsp;&nbsp;|</a>
+				 <a>交易人数：</a>
+			 </div>
+			 &nbsp;<p>&nbsp;&nbsp;活动地点：广东省韶关市黄浦镇</p>
+			 &nbsp;
+			 &nbsp;<p>&nbsp;&nbsp;报名时间：2018年12月30日</p>
+			
+			&nbsp;<p>&nbsp;&nbsp;活动联系人：古国宝&nbsp;&nbsp;&nbsp;</p>
+			&nbsp;<p>&nbsp;&nbsp;联系人电话：2323232323</p>
+			 <form action="#"  method="post"  name="pay">
+		  	 <br>
+			 <a>&nbsp;&nbsp;报名姓名：<input type="text" value="" name="name"></input></a>
+			 <br><br>
+			 <a>&nbsp;&nbsp;报名电话：<input type="text" value="" name="phone"></input></a>
+			 <br><br>
+			 <a>&nbsp;&nbsp;报名人数：<input type="number" value="" name="number"></input></a>
+			
+			<div class="input">
+				<input style="line-height:40px;font-size: 20px;background-color: #EF494C; margin-left: 25px;border: 0px " type="submit" 
+			  alt="报名亲子活动" value="马上报名"></input>
+			</div>
+			</form>
+		</div>
+		
+	</div>
+</div>
+	
+	</body>
+</html>
