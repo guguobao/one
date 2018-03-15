@@ -39,6 +39,16 @@ class VoluntaryTeachingAdmin(admin.ModelAdmin):
     list_display = ['id', 'place', 'time', 'numberpeople', 'content', 'image_link', 'shortcontent',
                     'servicerequirement', 'contactpeople', 'contactphone', 'closingtime', 'activitycode']
 
+class agribusinesstypingAdmin(admin.ModelAdmin):
+    list_display = ['name','image_link','typingfood','typinglink']
+
+
+class updatafoodAdmin(admin.ModelAdmin):
+    list_display = ['name','img','image_link','shortcontent','content','price']
+
+class foodclassAdmin(admin.ModelAdmin):
+    list_display = [ 'classname','foods']
+
 
 admin.site.register(UserInfo,UserInfoAdmin)
 admin.site.register(naunfeng,naunfengAdmin)
@@ -50,3 +60,6 @@ admin.site.register(t_donate,t_donateAdmin)
 admin.site.register(t_charity_bazaar,t_charity_bazaarAdmin)
 admin.site.register(postcard,postcardAdmin)
 admin.site.register(VoluntaryTeaching,VoluntaryTeachingAdmin)
+admin.site.register(agribusinesstyping,agribusinesstypingAdmin)
+admin.site.register(updatafood,updatafoodAdmin)
+admin.site.register(foodclass,foodclassAdmin)

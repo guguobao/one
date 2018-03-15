@@ -70,8 +70,6 @@ class t_parents_child_campaign(models.Model):
     contactphone=models.IntegerField(default='112223333')
     image_link=models.CharField(max_length=100,default='picture/.jpg')
 
-
-
 #people ask help
 class t_ask_help(models.Model):
     name=models.CharField(max_length=20,default='name')
@@ -109,6 +107,7 @@ class postcard(models.Model):
     postcardnumber=models.IntegerField(max_length=25,default='001')
     jumplink=models.CharField(max_length=1000,default='')
 
+#义教
 class VoluntaryTeaching(models.Model):
     place = models.CharField(max_length=100, default='地点')
     time = models.DateField()
@@ -121,3 +120,36 @@ class VoluntaryTeaching(models.Model):
     contactpeople = models.CharField(max_length=25, default='name')
     image_link = models.CharField(max_length=100, default='picture/.jpg')
     activitycode = models.IntegerField(default='000')
+
+#农商分类
+class agribusinesstyping(models.Model):
+    name = models.CharField(max_length=100,default='分类一')
+    image_link =  models.CharField(max_length=200,default='picture/agribusinesstyping/logo.png')
+    typingfood = models.CharField(max_length=200,default='分类请用、分隔符')
+    typinglink = models.CharField(max_length=100,default='每个分类链接用、分割符')
+
+
+#农商商品最新产品
+class updatafood(models.Model):
+    name = models.CharField(max_length=200,default='')
+    img = models.ImageField(null=True, blank=True, upload_to="static")
+    image_link = models.CharField(max_length=300,default='agribusiness/picture/updatafoodpicture/logo.png')
+    shortcontent = models.CharField(max_length=300,default='shortcontent')
+    content = models.CharField(max_length=200,default='content')
+    price = models.CharField(max_length=300,null=True,blank=True,default='')
+
+    def __unicode__(self):
+        return u' %s %s %s %s %s %s %s %s %s %s %s %s' % ("name:",self.name,"__image_link:",self.image_link,"__img:",self.img,"__content:", self.content,"__shortcontent:",self.shortcontent,"__price:",self.price)
+
+#农商商品分类汇
+class foodclass(models.Model):
+    classnamelist = ((1, '分类一'), (2, '分类二'), (3, '分类三'), (4, '分类四'),)
+    classname = models.IntegerField(choices=classnamelist,default=1)
+    foods = models.ForeignKey('updatafood')
+
+
+
+
+
+
+

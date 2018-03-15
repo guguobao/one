@@ -2,7 +2,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader,RequestContext
-from oneapp01.models import UserInfo, t_voluntary_activity, postcard, t_parents_child_campaign, VoluntaryTeaching
+from oneapp01.models import UserInfo, t_voluntary_activity, postcard, t_parents_child_campaign, VoluntaryTeaching, agribusinesstyping
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 
 
@@ -147,7 +147,38 @@ def helphtml(request):
 #农商
 def agribusiness(request):
    # list={'#TopAds':'#TopAds','/TopAds':'/TopAds','#KeyWords':'#KeyWords','/KeyWords':'/KeyWords','#equal IsImportant true':'#equal IsImportant true','else':'else','/equal':'/equal'}
-    return render(request,'one/agribusiness.html')
+    #get agribusinesstyping  all  object
+    typing = agribusinesstyping.objects.all()
+    typinglen = len(typing)
+    typinglist = []
+   #get all typing
+    for i in range(typinglen):
+        list = []
+        typingname = typing[i].typingfood
+        list = typingname.split(u"、")
+        typinglist.append(list)#不能用typinglist[i] = ...
+    typinglink = []
+    #get all link of typing
+    for i in range(typinglen):
+        list = []
+        typingname = typing[i].typinglink
+        list = typingname.split(u"、")
+        typinglink.append(list)
+    test = []
+    for i in range(typinglen):
+        b = []
+        for j in range(len(typinglink[i])):
+            a = {'food':typinglist[i][j],'link':typinglink[i][j]}
+            b.append(a)
+        test.append(b)
+
+
+    typingall = []
+    for i in range(typinglen):
+        list = {'name':typing[i].name,'image_link':typing[i].image_link,'typingfood':test[i],'typinglink':typinglink[i]}
+        typingall.append(list)
+
+    return render(request,'one/agribusiness.html',{'typingall':typingall})
 
 #农商2
 def agribusinesschild(request):
