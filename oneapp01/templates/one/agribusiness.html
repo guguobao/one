@@ -167,7 +167,7 @@ vConsole ——开源的前端console 调试面板 - 前端观察
             <div class="catalogs-title"><a href="javascript:;">全部农作物分类▼</a></div>
             <div class="catalogs-list" style="display:none">
 
-                {%  for i in typingall  %}
+                          {%  for i in typingall  %}
 
                         <div class="item">
                             <h3 class="t01_channelhome"><a href={{ i.image_link }}  ><i></i>{{ i.name }}<s>></s></a></h3>
@@ -187,193 +187,13 @@ vConsole ——开源的前端console 调试面板 - 前端观察
                             </div>
                         </div>
 
-                {%   endfor  %}
+                      {%   endfor  %}
 
 
 
-                <!---->
-                        <!--<div class="item">-->
-                            <!--<h3 class="t05_channelhome"><a href="http://www.yiguo.com/products/05_channelhome.html"><i></i>精选肉类<s>></s></a></h3>-->
-                            <!--<div class="sub-item">-->
-                                <!--<h4><a href="http://www.yiguo.com/products/05_channelhome.html">精选肉类</a></h4>-->
-                                <!--<div class="sub-list">-->
-                                            <!--<a href="http://www.yiguo.com/products/0501_jinkouniurou.html" target="_blank">进口牛肉</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0502_guochanniurou.html" target="_blank">国产牛肉</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0503_zhurou.html" target="_blank">猪肉</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0504_yangrou.html" target="_blank">羊肉</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0505_xiangchang.html" target="_blank">香肠</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0506_huotui.html" target="_blank">火腿/培根</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0507_rouzhipin.html" target="_blank">肉制品</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0508_jinkoulurou.html" target="_blank">进口鹿肉</a>-->
-                                <!--</div>-->
-                                        <!--<div class="catalogs-ad">-->
-                                                    <!--<a href="http://www.yiguo.com/products/05_channelhome.html"><img src="{% static "agribusiness/picture/9570160763445053.png"%}" alt="精选肉类"></a>-->
-                                        <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="item">-->
-                            <!--<h3 class="t06_channelhome"><a href="http://www.yiguo.com/products/06_channelhome.html"><i></i>禽类蛋品<s>></s></a></h3>-->
-                            <!--<div class="sub-item">-->
-                                <!--<h4><a href="http://www.yiguo.com/products/06_channelhome.html">禽类蛋品</a></h4>-->
-                                <!--<div class="sub-list">-->
-                                                                                                                    <!--<a href="http://www.yiguo.com/products/0601_ji.html" target="_blank">鸡</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0602_ya.html" target="_blank">鸭</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0603_egeteseqinlei.html" target="_blank">鹅/鸽/特色禽类</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0604_dan.html" target="_blank">蛋</a>-->
-                                <!--</div>-->
-                                        <!--<div class="catalogs-ad">-->
-                                                    <!--<a href="http://www.yiguo.com/products/06_channelhome.html"><img src="{% static "agribusiness/picture/9570160763510589.png"%}" alt="禽类蛋品"></a>-->
-                                        <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="item">-->
-                            <!--<h3 class="t12_channelhome"><a href="http://www.yiguo.com/products/12_channelhome.html"><i></i>即烹美食<s>></s></a></h3>-->
-                            <!--<div class="sub-item">-->
-                                <!--<h4><a href="http://www.yiguo.com/products/12_channelhome.html">即烹美食</a></h4>-->
-                                <!--<div class="sub-list">-->
-                                                                                                                    <!--<a href="http://www.yiguo.com/products/1202_dujiamizhi.html" target="_blank">独家秘制</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1203_shengmenghaixian.html" target="_blank">生猛海鲜</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1204_rihanliaoli.html" target="_blank">日韩料理</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1205_meiweiliangtang.html" target="_blank">美味靓汤</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1206_jingdianzhucai.html" target="_blank">经典主菜</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1207_zhonghuameishi.html" target="_blank">中华美食</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1208_jingzhixican.html" target="_blank">精致西餐</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1209_kaiweixiaocai.html" target="_blank">开胃小菜</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1210_dongnanyafengwei.html" target="_blank">东南亚风味</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1211_tianyuanshishu.html" target="_blank">田园时蔬</a>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="item">-->
-                            <!--<h3 class="t04_channelhome"><a href="http://www.yiguo.com/products/04_channelhome.html"><i></i>海鲜水产<s>></s></a></h3>-->
-                            <!--<div class="sub-item">-->
-                                <!--<h4><a href="http://www.yiguo.com/products/04_channelhome.html">海鲜水产</a></h4>-->
-                                <!--<div class="sub-list">-->
-                                                                                                                    <!--<a href="http://www.yiguo.com/products/0401_yu.html" target="_blank">鱼</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0402_sanwenyu.html" target="_blank">三文鱼</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0403_xia.html" target="_blank">虾</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0404_xie.html" target="_blank">蟹</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0405_beilei.html" target="_blank">贝</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0406_huoxian.html" target="_blank">活鲜</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0407_haichanganhuo.html" target="_blank">海产干货</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0408_tesehaichan.html" target="_blank">特色海产</a>-->
-                                <!--</div>-->
-                                        <!--<div class="catalogs-ad">-->
-                                                    <!--<a href="http://www.yiguo.com/products/04_channelhome.html"><img src="{% static "agribusiness/picture/9570160763576125.png"%}" alt="海鲜水产"></a>-->
-                                        <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="item">-->
-                            <!--<h3 class="t08_channelhome"><a href="http://www.yiguo.com/products/08_channelhome.html"><i></i>乳品糕点<s>></s></a></h3>-->
-                            <!--<div class="sub-item">-->
-                                <!--<h4><a href="http://www.yiguo.com/products/08_channelhome.html">乳品糕点</a></h4>-->
-                                <!--<div class="sub-list">-->
-                                                                                                                    <!--<a href="http://www.yiguo.com/products/0801_nailao.html" target="_blank">奶酪</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0802_huangyounaiyou.html" target="_blank">黄油/奶油</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0803_rusuanyinliao.html" target="_blank">酸奶/乳酸饮料</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0804_niunai.html" target="_blank">牛奶</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0805_mianbao.html" target="_blank">面包</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0806_dangao.html" target="_blank">蛋糕</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0807_tiandian.html" target="_blank">甜点</a>-->
-                                <!--</div>-->
-                                        <!--<div class="catalogs-ad">-->
-                                                    <!--<a href="http://www.yiguo.com/products/08_channelhome.html"><img src="{% static "agribusiness/picture/9570160763641661.png"%}" alt="乳品糕点"></a>-->
-                                        <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="item">-->
-                            <!--<h3 class="t03_channelhome"><a href="http://www.yiguo.com/products/03_channelhome.html"><i></i>新鲜蔬菜<s>></s></a></h3>-->
-                            <!--<div class="sub-item">-->
-                                <!--<h4><a href="http://www.yiguo.com/products/03_channelhome.html">新鲜蔬菜</a></h4>-->
-                                <!--<div class="sub-list">-->
-                                                                                                                    <!--<a href="http://www.yiguo.com/products/0301_yecailei.html" target="_blank">叶菜类</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0302_genjinglei.html" target="_blank">根茎类</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0303_qieguoguaguolei.html" target="_blank">茄果/瓜果类</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0304_huacaidoulei.html" target="_blank">花菜/豆类</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0306_jungu.html" target="_blank">菌菇</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0308_lengdongshucai.html" target="_blank">冷冻蔬菜</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0309_douzhipin.html" target="_blank">豆制品</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0310_congsuanlei.html" target="_blank">葱蒜类</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0311_shucaizuhe.html" target="_blank">蔬菜组合</a>-->
-                                <!--</div>-->
-                                        <!--<div class="catalogs-ad">-->
-                                                    <!--<a href="http://www.yiguo.com/products/03_channelhome.html"><img src="{% static "agribusiness/picture/9570161550040894.png"%}" alt="新鲜蔬菜"></a>-->
-                                        <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="item">-->
-                            <!--<h3 class="t10_channelhome"><a href="http://www.yiguo.com/products/10_channelhome.html"><i></i>方便速食<s>></s></a></h3>-->
-                            <!--<div class="sub-item">-->
-                                <!--<h4><a href="http://www.yiguo.com/products/10_channelhome.html">方便速食</a></h4>-->
-                                <!--<div class="sub-list">-->
-                                                                                                                    <!--<a href="http://www.yiguo.com/products/1008_ healthsoup.html" target="_blank">养生汤品</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1001_lengdongdianxin.html" target="_blank">冷冻点心</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1002_xishizhushi.html" target="_blank">西式主食</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1003_zhongshizhushi.html" target="_blank">中式主食</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1004_huoguoliao.html" target="_blank">火锅料</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1005_lengcangshushi.html" target="_blank">冷藏熟食</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1006_banchengpincai.html" target="_blank">半成品菜</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1007_yihejiayan.html" target="_blank">易盒家宴</a>-->
-                                <!--</div>-->
-                                        <!--<div class="catalogs-ad">-->
-                                                    <!--<a href="http://www.yiguo.com/products/10_channelhome.html"><img src="{% static "agribusiness/picture/9570160763838269.png"%}" alt="方便速食"></a>-->
-                                        <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="item">-->
-                            <!--<h3 class="t07_channelhome"><a href="http://www.yiguo.com/products/07_channelhome.html"><i></i>粮油杂货<s>></s></a></h3>-->
-                            <!--<div class="sub-item">-->
-                                <!--<h4><a href="http://www.yiguo.com/products/07_channelhome.html">粮油杂货</a></h4>-->
-                                <!--<div class="sub-list">-->
-                                                                                                                    <!--<a href="http://www.yiguo.com/products/0701_mi.html" target="_blank">米</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0702_zaliang.html" target="_blank">杂粮</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0703_mianmianzhipin.html" target="_blank">面/面制品</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0704_you.html" target="_blank">油</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0705_tiaoweiliao.html" target="_blank">调味料</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0706_ganhuo.html" target="_blank">干货</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0707_guoganlingshi.html" target="_blank">果干/零食</a>-->
-                                <!--</div>-->
-                                        <!--<div class="catalogs-ad">-->
-                                                    <!--<a href="http://www.yiguo.com/products/07_channelhome.html"><img src="{% static "agribusiness/picture/9570160757940029.png"%}" alt="粮油杂货"></a>-->
-                                        <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="item">-->
-                            <!--<h3 class="t09_channelhome"><a href="http://www.yiguo.com/products/09_channelhome.html"><i></i>饮料酒水<s>></s></a></h3>-->
-                            <!--<div class="sub-item">-->
-                                <!--<h4><a href="http://www.yiguo.com/products/09_channelhome.html">饮料酒水</a></h4>-->
-                                <!--<div class="sub-list">-->
-                                                                                                                    <!--<a href="http://www.yiguo.com/products/0901_shui.html" target="_blank">水</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0902_guozhiyinliao.html" target="_blank">果汁/饮料</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0903_chongtiaoyinpin.html" target="_blank">冲调饮品</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0904_jiujiuju.html" target="_blank">葡萄酒/酒具</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/0905_beer.html" target="_blank">啤酒</a>-->
-                                <!--</div>-->
-                                        <!--<div class="catalogs-ad">-->
-                                                    <!--<a href="http://www.yiguo.com/products/09_channelhome.html"><img src="{% static "agribusiness/picture/9570160763182909.png"%}" alt="饮料酒水"></a>-->
-                                        <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="item">-->
-                            <!--<h3 class="t11_channelhome"><a href="http://www.yiguo.com/products/11_channelhome.html"><i></i>礼品礼券<s>></s></a></h3>-->
-                            <!--<div class="sub-item">-->
-                                <!--<h4><a href="http://www.yiguo.com/products/11_channelhome.html">礼品礼券</a></h4>-->
-                                <!--<div class="sub-list">-->
-                                                                                                                    <!--<a href="http://www.yiguo.com/products/1101_lipinlihe.html" target="_blank">礼品礼盒</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1102_likaliquan.html" target="_blank">礼卡礼券</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1103_yuanshanlihe.html" target="_blank">原膳礼盒</a>-->
-                                            <!--<a href="http://www.yiguo.com/products/1106_zhinengyingjian.html" target="_blank">智能硬件</a>-->
-                                <!--</div>-->
-                                        <!--<div class="catalogs-ad">-->
-                                                    <!--<a href="http://www.yiguo.com/products/11_channelhome.html"><img src="{% static "agribusiness/picture/9570160763903805.png"%}" alt="礼品礼券"></a>-->
-                                        <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
+                            <!--商品分类 结束-->
             </div>
         </div>
-        <!--商品分类 结束-->
-    </div>
-</div>
 <!------- 轮播广告 ------->
 <div class="banner-slider">
     <ul class="b-slider">
@@ -450,50 +270,29 @@ vConsole ——开源的前端console 调试面板 - 前端观察
 <!------- 活动、广告位 ------->
 
     <div class="wrap ad-item">
+
         <ul>
-                <li>
-                    <a href="http://www.yiguo.com/activity/sale/3200" target="_blank">
-                        <img src="{% static "agribusiness/picture/9288692687216739.jpg"%}" width="290">
-                            <p><b>新品专区</b>探访源头产地 臻选当令时鲜</p>
-                    </a>
-                </li>
-                <li>
+            {%  for k in newsfood  %}
+                 <li>
                     <a href="http://www.yiguo.com/activity/sale/3203" target="_blank">
-                        <img src="{% static "agribusiness/picture/9288692888445038.jpg"%}" width="290">
-                            <p><b>优质生活</b>美食有态度，生活更有味</p>
+                        <img src={% static  k.image_link %} width="290">
+                            <p><b>{{ k.shortcontent }}</b>{{ k.content }}</p>
                     </a>
                 </li>
-                <li>
-                    <a href="http://www.yiguo.com/products/01_channelhome.html" target="_blank">
-                        <img src="{% static "agribusiness/picture/9288718007313455.jpg"%}" width="290">
-                            <p><b>水果专区</b>全球水果最新鲜速递</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://article.yiguo.com/" target="_blank">
-                        <img src="{% static "agribusiness/picture/9288709403714262.jpg"%}" width="290">
-                            <p><b>菜谱专栏</b>大厨私房菜 餐桌新食尚</p>
-                    </a>
-                </li>
+            {%   endfor  %}
+
         </ul>
     </div>
 
 <!------- 商品楼层 ------->
-        <div class="floor wrap 01_channelhome clearfix loadfloor" id="t01_channelhome" data-url="http://127.0.0.1:8000/agribusiness/agribusiness?number=001">
+
+        {%  for m in classfoodlist %}
+
+        <div class='floor wrap 0{{ m.id }}_channelhome clearfix loadfloor' id='t0{{ m.id }}_channelhome' data-url='http://127.0.0.1:8000/agribusiness/agribusiness?number=00{{ m.id }}'>
             <div class="loding"></div>
         </div>
-        <div class="floor wrap 02_channelhome clearfix loadfloor" id="t02_channelhome" data-url="http://192.168.0.111:8000/agribusiness/agribusiness?number=002">
-            <div class="loding"></div>
-        </div>
-        <div class="floor wrap 04_channelhome clearfix loadfloor" id="t04_channelhome" data-url="http://127.0.0.1:8000/agribusiness/agribusiness?number=003">
-            <div class="loding"></div>
-        </div>
-        <div class="floor wrap 05_channelhome clearfix loadfloor" id="t05_channelhome" data-url="http://127.0.0.1:8000/agribusiness/agribusiness?number=004">
-            <div class="loding"></div>
-        </div>
-        <div class="floor wrap 06_channelhome clearfix loadfloor" id="t06_channelhome" data-url="http://127.0.0.1:8000/agribusiness/agribusiness?number=005">
-            <div class="loding"></div>
-        </div>
+
+        {%  endfor   %}
 
  
         <!--腰线 开始-->
@@ -501,31 +300,34 @@ vConsole ——开源的前端console 调试面板 - 前端观察
         
 <div class="floor-guide" style="display: none;">
     <div class="mui-nav">
-            <a href="#t01_channelhome">
-                <b class="icon_01_channelhome">&nbsp;</b>
-                <em>粗粮</em>
+
+        {%    for b in classfoodlist  %}
+            <a href=#t0{{ b.id  }}_channelhome>
+                <b class=icon_0{{ b.id }}_channelhome>&nbsp;</b>
+                <em>{{ b.classname }}</em>
                 <i>&nbsp;</i>
             </a>
-            <a href="#t02_channelhome">
-                <b class="icon_02_channelhome">&nbsp;</b>
-                <em>国产水果</em>
-                <i>&nbsp;</i>
-            </a>
-            <a href="#t03_channelhome">
-                <b class="icon_04_channelhome">&nbsp;</b>
-                <em>海鲜水产</em>
-                <i>&nbsp;</i>
-            </a>
-            <a href="#t04_channelhome">
-                <b class="icon_05_channelhome">&nbsp;</b>
-                <em>精选肉类</em>
-                <i>&nbsp;</i>
-            </a>
-            <a href="#t05_channelhome">
-                <b class="icon_06_channelhome">&nbsp;</b>
-                <em>禽类蛋品</em>
-                <i>&nbsp;</i>
-            </a>
+        {%  endfor    %}
+            <!--<a href="#t02_channelhome">-->
+                <!--<b class="icon_02_channelhome">&nbsp;</b>-->
+                <!--<em>国产水果</em>-->
+                <!--<i>&nbsp;</i>-->
+            <!--</a>-->
+            <!--<a href="#t03_channelhome">-->
+                <!--<b class="icon_03_channelhome">&nbsp;</b>-->
+                <!--<em>海鲜水产</em>-->
+                <!--<i>&nbsp;</i>-->
+            <!--</a>-->
+            <!--<a href="#t04_channelhome">-->
+                <!--<b class="icon_04_channelhome">&nbsp;</b>-->
+                <!--<em>精选肉类</em>-->
+                <!--<i>&nbsp;</i>-->
+            <!--</a>-->
+            <!--<a href="#t05_channelhome">-->
+                <!--<b class="icon_05_channelhome">&nbsp;</b>-->
+                <!--<em>禽类蛋品</em>-->
+                <!--<i>&nbsp;</i>-->
+            <!--</a>-->
 
     </div>
 </div>

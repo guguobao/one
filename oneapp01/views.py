@@ -2,7 +2,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader,RequestContext
-from oneapp01.models import UserInfo, t_voluntary_activity, postcard, t_parents_child_campaign, VoluntaryTeaching, agribusinesstyping
+from oneapp01.models import UserInfo, t_voluntary_activity, postcard, t_parents_child_campaign, VoluntaryTeaching, agribusinesstyping,updatafood ,foodclass ,classname, classfirstfood
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 
 
@@ -144,6 +144,18 @@ def adduser(request):
 def helphtml(request):
     return render(request,'one/help.html')
 
+
+#get 分类表单
+def getclassname():
+    classnames = classname.objects.all()
+    list = []
+    for i in range(len(classnames)):
+        str = classnames[i].classnames.encode("utf-8")
+        list.append(str)
+    return list
+
+#get
+
 #农商
 def agribusiness(request):
    # list={'#TopAds':'#TopAds','/TopAds':'/TopAds','#KeyWords':'#KeyWords','/KeyWords':'/KeyWords','#equal IsImportant true':'#equal IsImportant true','else':'else','/equal':'/equal'}
@@ -165,6 +177,23 @@ def agribusiness(request):
         list = typingname.split(u"、")
         typinglink.append(list)
     test = []
+
+    # get new updatafoods
+    allfoods = updatafood.objects.all().values("id")
+    lenth = len(allfoods)
+    if lenth < 4:
+        lenth=4
+    updatafoods = updatafood.objects.all()[lenth-4:lenth]
+    agribusiness = {}
+    newsfood = []
+
+
+    for i in range(4):
+        list = {'name':updatafoods[i].name,'jumplink':updatafoods[i].jumplink,'image_link':updatafoods[i].image_link,'shortcontent':updatafoods[i].shortcontent,'content':updatafoods[i].content}
+        newsfood.append(list)
+    #agribusiness['newsfood'] = newsfood
+
+
     for i in range(typinglen):
         b = []
         for j in range(len(typinglink[i])):
@@ -172,32 +201,65 @@ def agribusiness(request):
             b.append(a)
         test.append(b)
 
-
+    
     typingall = []
     for i in range(typinglen):
         list = {'name':typing[i].name,'image_link':typing[i].image_link,'typingfood':test[i],'typinglink':typinglink[i]}
         typingall.append(list)
+       
+    #get classfood
+    classfoods = foodclass.objects.all()
+    foodslen = len(classfoods)
+    classfoodlist = []
+    classlist = getclassname()
+    for i in  range(foodslen):
+        index = classfoods[i].classname
+        list = {'id':classfoods[i].id,'classname':classlist[index]}
+        classfoodlist.append(list)
 
-    return render(request,'one/agribusiness.html',{'typingall':typingall})
+
+
+
+    lists = {'typingall':typingall,'newsfood':newsfood,'classfoodlist':classfoodlist}
+
+    return render(request,'one/agribusiness.html',lists)
 
 #农商2
 def agribusinesschild(request):
-   # return render(request, 'one/agribusiness001.html')
-    a = request.GET['number']
-    if request.method == 'GET':
 
-        if a == '001':
-            return render(request,'one/agribusiness001.html')
-        elif a == '002':
-            return render(request, 'one/agribusiness002.html')
-        elif a == '003':
-            return render(request, 'one/agribusiness003.html')
-        elif a == '004':
-            return  render(request,'one/agribusiness004.html')
-        elif a == '005':
-            return render(request, 'one/agribusiness005.html')
-        else:
-            return HttpResponse("404")
+    a = request.GET['number']
+    a = int(a)
+    if request.method == 'GET':
+        classfoods = foodclass.objects.all()
+        classfirstfoods = classfirstfood.objects.all()
+        updatafoods = updatafood.objects.all()
+        getclassfood = classfoods[a-1]
+        index= [getclassfood.foods1.id,getclassfood.foods2.id,getclassfood.foods3.id,getclassfood.foods4.id,getclassfood.foods5.id,getclassfood.foods6.id,getclassfood.firstfood.id]
+        foodslist = {}
+        for i in range(6):
+            list = {'image_link':updatafoods[index[i]-1].image_link,'name':updatafoods[index[i]-1].name}
+            foodslist[i] = list
+        firstfood ={'imagelink':classfirstfoods[index[6]-1].imagelink,'name':classfirstfoods[index[6]-1].name}
+
+        lists = {'foodslist':foodslist,'firstfood':firstfood}
+
+        return render(request,'one/agribusiness001.html',lists)
+        #return HttpResponse("504")
+    else:
+        return HttpResponse("404")
+
+        # if a == '001':
+        #     return render(request,'one/agribusiness001.html')
+        # elif a == '002':
+        #     return render(request, 'one/agribusiness002.html')
+        # elif a == '003':
+        #     return render(request, 'one/agribusiness003.html')
+        # elif a == '004':
+        #     return  render(request,'one/agribusiness004.html')
+        # elif a == '005':
+        #     return render(request, 'one/agribusiness005.html')
+        # else:
+        #     return HttpResponse("404")
 
 #农商商品
 def agribusinesspay(request):
@@ -207,7 +269,21 @@ def agribusinesspay(request):
 
 #亲子活动
 def freebuy(request):
+    # parents_childmessage = t_parents_child_campaign.objects.all()[:2]
+    # name = request.GET['name']
+    # # for i in parents_childmessage:
+    # i = parents_childmessage[0]
+    # if name == 'county':
+    #     list = {'shortcontent':i.shortcontent,'image_link':i.image_link}
 
     if request.method == 'GET':
-        a = request.GET['name']
+        # a = request.GET['name']
         return render(request,'one/freebuy.html')
+
+
+def getclassname():
+    classnames = classname.objects.all()
+    list = []
+    for i in range(len(classnames)):
+        list.append(classnames[i].classnames)
+    return list

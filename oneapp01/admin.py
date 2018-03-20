@@ -18,7 +18,7 @@ class t_voluntary_activityAdmin(admin.ModelAdmin):
 
 
 class t_parents_child_campaignAdmin(admin.ModelAdmin):
-    list_display = ['id', 'place', 'time', 'numberpeople','contactname','contactphone', 'content', 'image_link']
+    list_display = ['id', 'place', 'time', 'numberpeople','contactname','contactphone','content', 'image_link']
 
 
 class t_ask_helpAdmin(admin.ModelAdmin):
@@ -44,11 +44,16 @@ class agribusinesstypingAdmin(admin.ModelAdmin):
 
 
 class updatafoodAdmin(admin.ModelAdmin):
-    list_display = ['name','img','image_link','shortcontent','content','price']
+    list_display = ['name','jumplink','image_link','shortcontent','content','price']
 
 class foodclassAdmin(admin.ModelAdmin):
-    list_display = [ 'classname','foods']
+    list_display = [ 'classname','foods1','foods2','foods3','foods4','foods5','foods6','firstfood']
 
+class classfirstfoodAdmin(admin.ModelAdmin):
+    list_display = ['name','imagelink','shortcontent','content']
+
+class classnameAdmin(admin.ModelAdmin):
+    list_display = ['classnames']
 
 admin.site.register(UserInfo,UserInfoAdmin)
 admin.site.register(naunfeng,naunfengAdmin)
@@ -63,3 +68,5 @@ admin.site.register(VoluntaryTeaching,VoluntaryTeachingAdmin)
 admin.site.register(agribusinesstyping,agribusinesstypingAdmin)
 admin.site.register(updatafood,updatafoodAdmin)
 admin.site.register(foodclass,foodclassAdmin)
+admin.site.register(classfirstfood,classfirstfoodAdmin)
+admin.site.register(classname,classnameAdmin)

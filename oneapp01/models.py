@@ -1,6 +1,6 @@
 # coding:utf-8
 from django.db import models
-
+#from oneapp01.views import getclassname
 
 #def decode(info):
 #    return info.decode('utf-8')
@@ -132,23 +132,58 @@ class agribusinesstyping(models.Model):
 #农商商品最新产品
 class updatafood(models.Model):
     name = models.CharField(max_length=200,default='')
-    img = models.ImageField(null=True, blank=True, upload_to="static")
-    image_link = models.CharField(max_length=300,default='agribusiness/picture/updatafoodpicture/logo.png')
+    jumplink = models.CharField(max_length=200,default='')
+    image_link = models.CharField(max_length=300,default='agribusiness/picture/updatafoodpicture/agribusinesstyping/logo.png')
     shortcontent = models.CharField(max_length=300,default='shortcontent')
     content = models.CharField(max_length=200,default='content')
     price = models.CharField(max_length=300,null=True,blank=True,default='')
 
     def __unicode__(self):
-        return u' %s %s %s %s %s %s %s %s %s %s %s %s' % ("name:",self.name,"__image_link:",self.image_link,"__img:",self.img,"__content:", self.content,"__shortcontent:",self.shortcontent,"__price:",self.price)
+        return u' %s %s %s %s %s %s %s %s %s %s %s %s' % ("name:",self.name,"__image_link:",self.image_link,"__jumplink:",self.jumplink,"__content:", self.content,"__shortcontent:",self.shortcontent,"__price:",self.price)
+
+
+class classname(models.Model):
+    classnames = models.CharField(max_length=100,default="分类一")
+
+def getclassname():
+    classnames = classname.objects.all()
+    list = []
+    for i in range(len(classnames)):
+        str = classnames[i].classnames.encode("utf-8")
+        list.append(str)
+    return list
+
 
 #农商商品分类汇
 class foodclass(models.Model):
-    classnamelist = ((1, '分类一'), (2, '分类二'), (3, '分类三'), (4, '分类四'),)
+    list = getclassname()
+    choicelist = []
+    string =  ","
+    str = ()
+    for i in range(len(list)):
+        str = (i,list[i])
+        choicelist.append(str)
+   #str2 = string.join(choicelist)
+    #classnamelist = ((1, list[0]), (2, list[1]), (3, '分类三'), (4, '分类四'),)
+    classnamelist = (choicelist)
     classname = models.IntegerField(choices=classnamelist,default=1)
-    foods = models.ForeignKey('updatafood')
+    foods1 = models.ForeignKey('updatafood',related_name='foods1')
+    foods2 = models.ForeignKey('updatafood',related_name='foods2')
+    foods3 = models.ForeignKey('updatafood',related_name='foods3')
+    foods4 = models.ForeignKey('updatafood',related_name='foods4')
+    foods5 = models.ForeignKey('updatafood',related_name='foods5')
+    foods6 = models.ForeignKey('updatafood',related_name='foods6')
+    firstfood = models.ForeignKey('classfirstfood',related_name='firstfood')
 
 
+class classfirstfood(models.Model):
+    name = models.CharField(max_length=100,default='')
+    imagelink = models.CharField(max_length=200,default='agribusiness/picture/updatafoodpicture/agribusinesstyping/logo.png')
+    shortcontent = models.CharField(max_length=200,default='')
+    content = models.CharField(max_length=300,default='')
 
+    def __unicode__(self):
+        return u"%s %s %s %s %s %s %s %s" %('name:',self.name,'imagelink',self.imagelink,'shortcontent',self.shortcontent,'content',self.content)
 
 
 

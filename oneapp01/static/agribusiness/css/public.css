@@ -172,7 +172,7 @@ border-radius: 16px;}
 /*------导航条------*/
 .header-nav{ z-index:77; position:relative;}
 /*商品分类*/
-.catalogs{float:left; position:relative;}
+.catalogs{float:left; position:relative; z-index:10;}
 .catalogs-title{ width:180px; height:38px; position:relative; text-align:center; background:#008842;}
 .catalogs-title a{ overflow:hidden; font: bold 15px/16px "Microsoft YaHei"; color:#fff; display:block; height:16px; padding:11px 0; _padding:11px 0;}
 .catalogs-list{ display:none; position:absolute; height:462px; background: rgba(255, 255, 255, 0.9); background:#fff \9;}
